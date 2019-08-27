@@ -1,0 +1,10 @@
+node_modules
+assets/
+!dist/assets
+src/js/bootstrap4
+src/scss/bootstrap4
+src/scss/fontawesome
+.DS_Store
+/dist/.vs/dist/v15/.suo
+/dist/.vs/slnx.sqlite
+.vscode

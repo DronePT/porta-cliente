@@ -1,0 +1,58 @@
+@import "./scss_vars/template_variables";
+
+.login-logo {
+  position: absolute;
+  left: 5%;
+  top: 3%;
+}
+
+.bg-login {
+  background-image: linear-gradient(to bottom, rgba($primary-color, 0.5), rgba($dark-blue, 0.5)),
+    url(../img/bg_login.png);
+  background-repeat: no-repeat;
+  background-size: cover, cover;
+}
+
+.login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  background-color: $white;
+
+  > .row {
+    width: 70%;
+    min-width: 500px;
+  }
+
+  .nav-tabs {
+    border-bottom: none;
+
+    .nav-link {
+      background: white;
+      font-weight: 700;
+      color: $primary-color;
+      padding: 0.5rem 2rem;
+    }
+
+    .nav-item.show .nav-link,
+    .nav-link.active {
+      border: none;
+      border-bottom: solid 2px $primary-color;
+    }
+
+    .nav-link:not(.active):focus,
+    .nav-link:not(.active):hover {
+      border-color: transparent;
+      color: $primary-color;
+    }
+  }
+
+  .recover {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.3rem;
+    color: inherit;
+  }
+}

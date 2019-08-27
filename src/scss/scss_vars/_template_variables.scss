@@ -1,0 +1,95 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+//$primary: #6f31cd; // Thats a sample how you could change a BootStrap variable.
+$font-family-headers: "Avenir Next LT Pro Heavy";
+$font-family: "Roboto", sans-serif;
+
+$header-height: 130px;
+$header-height-tablet: 80px;
+$header-height-mobile: 50px;
+
+$navigation-width: 122px;
+
+$primary-color: #0075c9;
+$dark-primary: #015ea6;
+
+$primary: #0075c9;
+$white: #fff;
+$black: #000;
+$orange: #faa70b;
+$darker-blue: #0068b9;
+$dark-blue: #002855;
+$nav-mobile: #0075c9;
+$danger: #ff4141;
+$lightgreen: #4ad991;
+$light: #fff;
+$dark: #252d34;
+$dark-gray: #4d535c;
+$body-bg: #4d535c;
+$light-gray: #eaecec;
+$lighten-gray: #f4f6f5;
+
+// You can declare your own variables here $my_super_color: black;
+$grid-breakpoints: (
+  xxxs: 0,
+  xxs: 320px,
+  xs: 568px,
+  sm: 667px,
+  md: 769px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1440px,
+  xxxl: 1600px
+);
+
+$container-max-widths: (
+  xxxs: 0,
+  xxs: 320px,
+  xs: 480px,
+  md: 768px,
+  lg: 1024px,
+  xxxl: 1365px
+);
+
+$spacer: 1rem;
+
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 0.25
+  ),
+  2: (
+    $spacer * 0.5
+  ),
+  3: $spacer,
+  4: (
+    $spacer * 1.5
+  ),
+  5: (
+    $spacer * 3
+  ),
+  6: (
+    $spacer * 4.375
+  )
+);
+
+$theme-colors: (
+  primary: $primary-color,
+  orange: $orange,
+  light: $light,
+  dark: $dark,
+  danger: $danger,
+  lightgreen: $lightgreen
+);
+
+$border-width: 2px;
+
+$border-radius: 0.5rem;
+$border-radius-sm: 0.25rem;
+$border-radius-lg: 1rem;
+
+$box-shadow-sm: 0 0 0.5rem -0.25rem rgba($black, 0.54);
+$box-shadow: 0 0 1rem -0.5rem rgba($black, 0.72);
+$box-shadow-lg: 0 0 2rem -1rem rgba($black, 1);

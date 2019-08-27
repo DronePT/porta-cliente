@@ -1,0 +1,28 @@
+{
+  "browserSyncOptions": {
+    "server": {
+      "baseDir": "./"
+    },
+    "notify": false
+  },
+  "browserSyncWatchFiles": [
+    "./**/*.min.css",
+    "./**/*.min.js",
+    "./**/*.php",
+    "./**/*.html",
+    "./*.html"
+  ],
+  "paths": {
+    "js": "./assets/js",
+    "css": "./assets/css",
+    "srcimg": "./src/img",
+    "img": "./assets/img",
+    "imgsrc": "./src/images",
+    "scss": "./src/scss",
+    "node": "./node_modules/",
+    "dev": "./src",
+    "dist": "./dist",
+    "devdist": "./dev-dist",
+    "vendor": ""
+  }
+}
