@@ -1,5 +1,11 @@
 @import "./scss_vars/template_variables";
 
+html,
+body,
+.backoffice {
+  height: 100%;
+}
+
 .login-logo {
   position: absolute;
   left: 5%;
