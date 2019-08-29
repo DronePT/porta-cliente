@@ -23,6 +23,8 @@
     "dev": "./src",
     "dist": "./dist",
     "devdist": "./dev-dist",
-    "vendor": ""
+    "vendor": "",
+    "fontssrc": "./src/fonts",
+    "fonts": "./assets/fonts"
   }
 }

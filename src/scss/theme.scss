@@ -4,6 +4,8 @@
 // WRITE YOUR CUSTOM SCSS FROM HERE //
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 
+@import url("../fonts/avenir/style.css");
+
 html,
 body {
   font-family: $font-family;
@@ -427,6 +429,10 @@ main.backoffice {
 }
 
 /** Text Styling */
+.text-avenir-heavy {
+  font-family: "Avenir Next LT Pro Heavy", $font-family;
+}
+
 .text-bold {
   font-weight: 700;
 }
@@ -449,6 +455,11 @@ main.backoffice {
 .text-34 {
   font-size: 1.8888888889rem;
   line-height: 2.4444444444rem;
+}
+
+.text-48 {
+  font-size: 2.666666667rem;
+  line-height: 3.222222222rem;
 }
 
 /** Buttons Styling */

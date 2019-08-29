@@ -47,7 +47,11 @@ gulp.task("watch", ["browser-sync", "watch-assets"], function() {});
 
 // Run: gulp minify
 // runs gulp tasks minifyjs, minifycss and imgmin-complete to minify assets
-gulp.task("minify", ["minifyjs", "minifycss", "imgmin-complete"], function() {});
+gulp.task(
+  "minify",
+  ["minifyjs", "minifycss", "imgmin-complete"],
+  function() {}
+);
 
 // Run: gulp init
 // Creates the initial files
@@ -58,10 +62,14 @@ gulp.task("init", gulpSequence("copy-assets", "sass", "scripts", "minify"));
 gulp.task("watch-assets", function() {
   watch(paths.scss + "/**/*.scss", () => gulp.start("styles"));
 
-  watch([paths.dev + "/js/*.js", paths.dev + "/js/**/*.js"], () => gulp.start("scripts"));
+  watch([paths.dev + "/js/*.js", paths.dev + "/js/**/*.js"], () =>
+    gulp.start("scripts")
+  );
   gulp.watch(paths.imgsrc + "/**", ["imgmin-complete"]);
 
-  watch(paths.srcimg + "/*.{png,svg,jpeg,jpg,gif}", () => gulp.start("copy-images"));
+  watch(paths.srcimg + "/*.{png,svg,jpeg,jpg,gif}", () =>
+    gulp.start("copy-images")
+  );
 });
 
 // Run: gulp sass
@@ -174,24 +182,38 @@ gulp.task("minifyjs", function() {
 // Copy all needed dependency assets files from node_modules folder to src/js, src/scss folders
 gulp.task("copy-assets", ["copy-images"], function() {
   // Copy Slim Minified version of Jquery 3.*.* from node_modules
-  var stream = gulp.src(paths.node + "jquery/dist/jquery.slim.min.js").pipe(gulp.dest(paths.js));
+  var stream = gulp
+    .src(paths.node + "jquery/dist/jquery.slim.min.js")
+    .pipe(gulp.dest(paths.js));
 
   // Copy BS4 JS files
-  gulp.src(paths.node + "bootstrap/dist/js/**/*.js").pipe(gulp.dest(paths.dev + "/js/bootstrap4"));
+  gulp
+    .src(paths.node + "bootstrap/dist/js/**/*.js")
+    .pipe(gulp.dest(paths.dev + "/js/bootstrap4"));
 
   // Copy BS4 SCSS files
-  gulp.src(paths.node + "bootstrap/scss/**/*.scss").pipe(gulp.dest(paths.scss + "/bootstrap4"));
+  gulp
+    .src(paths.node + "bootstrap/scss/**/*.scss")
+    .pipe(gulp.dest(paths.scss + "/bootstrap4"));
 
   // Copy all Font Awesome Fonts
   gulp
-    .src(paths.node + "@fortawesome/fontawesome-free/webfonts/*.{ttf,woff,woff2,eot,svg}")
+    .src(
+      paths.node +
+        "@fortawesome/fontawesome-free/webfonts/*.{ttf,woff,woff2,eot,svg}"
+    )
     .pipe(gulp.dest("./assets/webfonts"));
 
   // Copy all FontAwesome5 Free SCSS files
-  gulp.src(paths.node + "@fortawesome/fontawesome-free/scss/*.scss").pipe(gulp.dest(paths.scss + "/fontawesome"));
+  gulp
+    .src(paths.node + "@fortawesome/fontawesome-free/scss/*.scss")
+    .pipe(gulp.dest(paths.scss + "/fontawesome"));
 
   // copy all image assets
   gulp.src(paths.srcimg + "/*").pipe(gulp.dest(paths.img + "/"));
+
+  // copy all custom fonts
+  gulp.src(paths.fontssrc + "/**/*").pipe(gulp.dest(paths.fonts + "/"));
 
   return stream;
 });
