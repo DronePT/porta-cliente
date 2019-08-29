@@ -15,158 +15,175 @@
 
 <body>
   <main class="backoffice backoffice-logged">
-    <header class="backoffice-header">
-      <div class="container">
-        <div class="row">
-          <div class="col d-flex align-items-center justify-content-between">
-            <div class="logo">
-              <img src="assets/img/logo_login.svg" alt="Gascan Logo">
-            </div>
-
-            <div class="dropdown show">
-              <a href="#" class="user dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <div class="data-container d-flex flex-column align-items-end">
-                  <span class="role">Administrador</span>
-                  <span class="name text-34 text-bold">João Costa</span>
-                </div>
-
-                <div class="avatar-container d-flex align-items-center ml-3">
-                  <div class="avatar">
-                    <img src="assets/img/user_avatar.svg" alt="User Avatar">
-                    <img src="assets/img/icon_dropdown.svg" alt="" class="icon-dropdown">
-                  </div>
-                </div>
-              </a>
-
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li class="dropdown-item">
-                  <a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
-                    data-target="#changeMyPasswordModal">Alterar Password</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="#" class="btn btn-sm btn-outline-primary">Terminar Sessão</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Change logged user password modal -->
-      <div class="modal fade" id="changeMyPasswordModal" tabindex="-1" role="dialog"
-        aria-labelledby="changeMyPasswordModalTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-body p-6">
-              <form action="" class="gascan-forms" style="max-width: 360px; margin: auto;">
-                <h1 class="text-primary text-34 text-bold text-center m-0 mb-5">Alterar Password</h1>
-
-                <div class="form-group">
-                  <label for="changePassword">Nova password</label>
-                  <input type="password" class="form-control" id="changePassword">
-                </div>
-
-                <div class="form-group">
-                  <label for="changeConfirmPassword">Confirmar password</label>
-                  <input type="password" class="form-control" id="changeConfirmPassword">
-                </div>
-
-                <div class="d-flex justify-content-between mt-5">
-                  <button type="reset" class="btn btn-outline-primary px-5" data-dismiss="modal">Cancelar</button>
-                  <button type="submit" class="btn btn-primary px-5">Alterar</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End: Change logged user password modal -->
-    </header>
     <nav class="backoffice-navigation">
-      <ul>
+      <a href="/" class="logo">
+        <img src="assets/img/logo_white.svg" alt="Gascan Logo">
+      </a>
+
+      <ul class="menu">
         <li>
-          <a href="#home" class="active">
+          <a href="/">
             <div class="icon">
-              <img src="assets/img/29_home_activeblue.svg" alt="">
+              <img src="assets/img/icon_menu_home.svg" alt="">
             </div>
             <span>Home</span>
           </a>
         </li>
 
         <li>
-          <a href="#Chat">
+          <a href="notificacoes.html" class="active">
             <div class="icon">
-              <img src="assets/img/31_message-oval_activeblue.svg" alt="">
-            </div>
-            <span>Chat</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="utilizadores.html">
-            <div class="icon">
-              <img src="assets/img/32_user.svg" alt="">
-            </div>
-            <span>Utilizadores</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="noticias.html">
-            <div class="icon">
-              <img src="assets/img/21_news_activeblue.svg" alt="">
-            </div>
-            <span>Noticias</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#Notificacoes">
-            <div class="icon">
-              <img src="assets/img/05_bell_activeblue.svg" alt="">
+              <img src="assets/img/icon_menu_notificacoes.svg" alt="">
+              <div class="bullet"></div>
             </div>
             <span>Notificações</span>
+            <div class="counter-badge">88</div>
           </a>
         </li>
 
         <li>
-          <a href="ofertas.html">
+          <a href="leituras.html">
             <div class="icon">
-              <img src="assets/img/18_eye_activeblue.svg" alt="">
+              <img src="assets/img/icon_menu_leituras.svg" alt="">
             </div>
-            <span>Ofertas de Trabalho</span>
+            <span>Leituras</span>
           </a>
         </li>
 
         <li>
-          <a href="destaques.html">
+          <a href="faturas.html">
             <div class="icon">
-              <img src="assets/img/19_image_clone_activeblue.svg" alt="">
+              <img src="assets/img/icon_menu_faturas.svg" alt="">
             </div>
-            <span>Slideshow</span>
+            <span>Faturas</span>
           </a>
         </li>
 
         <li>
-          <a href="#Campanhas">
+          <a href="servicos.html">
             <div class="icon">
-              <img src="assets/img/10_settings_activeblue.svg" alt="">
+              <img src="assets/img/icon_menu_servicos.svg" alt="">
             </div>
-            <span>Campanhas</span>
+            <span>Serviços & Campanhas</span>
           </a>
+        </li>
+      </ul>
+
+      <ul class="nav-contacts">
+        <li>
+          <div class="contact">
+            <img src="assets/img/icon_nav_phone.svg" alt="">
+            <div class="label text-16 py-1">Piquete de Emergência e Assistência Técnica 24h</div>
+            <div class="number text-22 text-bold">218 425 300</div>
+          </div>
+        </li>
+        <li>
+          <div class="contact">
+            <img src="assets/img/icon_nav_wrench.svg" alt="">
+            <div class="label text-16 py-1">Apoio ao Cliente Dias úteis das 9h ás 19h</div>
+            <div class="number text-22 text-bold">218 425 300</div>
+          </div>
         </li>
       </ul>
     </nav>
 
-    <div class="backoffice-content">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="page-header">
-              <h1 class="text-primary text-34 text-bold my-5">
-                Template Page
-              </h1>
+    <div class="backoffice-container">
+      <header class="backoffice-header">
+        <div class="container">
+          <div class="row">
+            <div class="col d-flex align-items-center justify-content-end">
+              <nav class="header-navigation">
+                <ul>
+                  <li>
+                    <a href="contratos.html">
+                      <div class="icon">
+                        <img src="assets/img/icon_header_contratos.svg" alt="">
+                      </div>
+                      <span>Contratos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="dadospessoais.html">
+                      <div class="icon">
+                        <img src="assets/img/icon_header_dados.svg" alt="">
+                      </div>
+                      <span>Dados Pessoais</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- /.header-navigation -->
+
+              <div class="dropdown show">
+                <a href="#" class="user dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <div class="avatar-container d-flex align-items-center mr-3">
+                    <div class="avatar">
+                      <img src="assets/img/user_avatar.svg" alt="User Avatar">
+                      <img src="assets/img/icon_dropdown.svg" alt="" class="icon-dropdown">
+                    </div>
+                  </div>
+
+                  <div class="data-container d-flex flex-column align-items-start">
+                    <span class="role">Olá de novo,</span>
+                    <span class="name text-34 text-bold">João Costa</span>
+                  </div>
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li class="dropdown-item">
+                    <a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                      data-target="#changeMyPasswordModal">Alterar Password</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#" class="btn btn-sm btn-outline-primary">Terminar Sessão</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Change logged user password modal -->
+        <div class="modal fade" id="changeMyPasswordModal" tabindex="-1" role="dialog"
+          aria-labelledby="changeMyPasswordModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-body p-6">
+                <form action="" class="gascan-forms" style="max-width: 360px; margin: auto;">
+                  <h1 class="text-primary text-34 text-bold text-center m-0 mb-5">Alterar Password</h1>
+
+                  <div class="form-group">
+                    <label for="changePassword">Nova password</label>
+                    <input type="password" class="form-control" id="changePassword">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="changeConfirmPassword">Confirmar password</label>
+                    <input type="password" class="form-control" id="changeConfirmPassword">
+                  </div>
+
+                  <div class="d-flex justify-content-between mt-5">
+                    <button type="reset" class="btn btn-outline-primary px-5" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary px-5">Alterar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End: Change logged user password modal -->
+      </header>
+
+      <div class="backoffice-content">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="page-header">
+                <h1 class="text-primary text-34 text-bold my-5">
+                  Template Page
+                </h1>
+              </div>
             </div>
           </div>
         </div>
