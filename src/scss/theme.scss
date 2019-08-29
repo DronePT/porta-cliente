@@ -16,7 +16,7 @@ body {
   padding: 0;
 
   color: $dark-gray;
-  background-color: $lighten-gray;
+  background-color: $white;
 }
 
 main.backoffice {
@@ -24,7 +24,7 @@ main.backoffice {
 
   width: 100%;
 
-  background-color: $lighten-gray;
+  background-color: $white;
 
   &.backoffice-logged {
     position: relative;
@@ -54,7 +54,7 @@ main.backoffice {
 
       margin-bottom: 48px;
 
-      border-bottom: solid 1px rgba($black, 0.1);
+      border-bottom: solid 1px rgba($dark-gray, 0.2);
     }
 
     > ul.menu {
@@ -173,8 +173,8 @@ main.backoffice {
 
       background-color: $white;
 
-      border-bottom: solid 1px #ebedec;
-      box-shadow: 0 0 16px -8px rgba(black, 0.08), 0 2px 4px -4px rgba(black, 0.16);
+      border-bottom: solid 1px rgba($dark-gray, 0.2);
+      // box-shadow: 0 0 16px -8px rgba(black, 0.08), 0 2px 4px -4px rgba(black, 0.16);
 
       .header-navigation {
         ul {
@@ -187,19 +187,30 @@ main.backoffice {
 
           margin-right: 3rem;
 
-          li a {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
+          li {
+            a {
+              user-select: none;
+              display: flex;
+              flex-flow: row nowrap;
+              align-items: center;
 
-            margin-left: 3rem;
+              height: 50px;
 
-            color: $primary-color;
-            font-weight: bold;
-            text-decoration: none;
+              margin-left: 3rem;
 
-            .icon {
-              margin-right: 1rem;
+              color: $primary-color;
+              font-weight: bold;
+              text-decoration: none;
+
+              .icon {
+                margin-right: 1rem;
+              }
+            }
+
+            &:first-child {
+              a {
+                margin-left: 0;
+              }
             }
           }
         }
@@ -274,7 +285,7 @@ main.backoffice {
     }
 
     div.backoffice-content {
-      background-color: $lighten-gray;
+      background-color: $white;
     }
   }
 }
