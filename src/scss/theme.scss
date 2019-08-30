@@ -237,8 +237,7 @@ main.backoffice {
 
                 background-color: transparent;
 
-                transition: left 0.2s ease, right 0.2s ease,
-                  background-color 0.2s ease;
+                transition: left 0.2s ease, right 0.2s ease, background-color 0.2s ease;
               }
 
               &:hover,
@@ -303,11 +302,7 @@ main.backoffice {
 
           .avatar-container .avatar {
             background-color: $primary-color;
-            background-image: linear-gradient(
-              to bottom,
-              $primary-color,
-              $dark-primary
-            );
+            background-image: linear-gradient(to bottom, $primary-color, $dark-primary);
 
             width: 50px;
             height: 50px;
@@ -339,8 +334,7 @@ main.backoffice {
           border-bottom-left-radius: 0.444444444rem;
           border-bottom-right-radius: 0.444444444rem;
 
-          box-shadow: 0px 0px 16px -8px rgba(black, 0.32),
-            0px 2px 8px -4px rgba(black, 0.16);
+          box-shadow: 0px 0px 16px -8px rgba(black, 0.32), 0px 2px 8px -4px rgba(black, 0.16);
 
           .dropdown-item {
             text-align: center;
@@ -362,8 +356,7 @@ main.backoffice {
   box-shadow: $box-shadow-lg, $box-shadow;
 
   &.paper-sm {
-    box-shadow: 0 4px 16px -8px rgba(black, 0.16),
-      0 0 8px -4px rgba(black, 0.32);
+    box-shadow: 0 4px 16px -8px rgba(black, 0.16), 0 0 8px -4px rgba(black, 0.32);
   }
 }
 
@@ -399,8 +392,7 @@ main.backoffice {
         }
 
         &:hover {
-          box-shadow: 0 4px 16px -8px rgba(black, 0.16),
-            0 8px 8px -2px rgba(black, 0.08);
+          box-shadow: 0 4px 16px -8px rgba(black, 0.16), 0 8px 8px -2px rgba(black, 0.08);
 
           td {
             font-weight: 700;
@@ -1025,8 +1017,7 @@ body {
 
         overflow: hidden;
 
-        box-shadow: 0 4px 16px -8px rgba(black, 0.32),
-          0 4px 16px -4px rgba(black, 0.16);
+        box-shadow: 0 4px 16px -8px rgba(black, 0.32), 0 4px 16px -4px rgba(black, 0.16);
 
         height: 380px;
 

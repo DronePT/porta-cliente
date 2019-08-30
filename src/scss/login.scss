@@ -1,5 +1,7 @@
 @import "./scss_vars/template_variables";
 
+$footer-height: 50px;
+
 html,
 body,
 .backoffice {
@@ -10,59 +12,83 @@ body,
   position: absolute;
   left: 5%;
   top: 3%;
+  z-index: 1;
 }
 
 .bg-login {
-  background-image: linear-gradient(
-      to bottom,
-      rgba($primary-color, 0.5),
-      rgba($dark-blue, 0.5)
-    ),
-    url(../img/bg_login.png);
+  background-image: url(../img/bg_login.png);
   background-repeat: no-repeat;
-  background-size: cover, cover;
+  background-size: cover;
 }
 
-.login-box {
+.login-box-container {
+  padding-bottom: $footer-height;
+
+  .login-box {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+
+    width: 100%;
+    background-color: $white;
+
+    padding-top: 15%;
+
+    overflow: auto;
+
+    > .row {
+      width: 80%;
+      min-width: 500px;
+    }
+
+    .nav-tabs {
+      border-bottom: none;
+
+      .nav-link {
+        background: white;
+        font-weight: 700;
+        color: $primary-color;
+        padding: 0.5rem 2rem;
+      }
+
+      .nav-item.show .nav-link,
+      .nav-link.active {
+        border: none;
+        border-bottom: solid 2px $primary-color;
+      }
+
+      .nav-link:not(.active):focus,
+      .nav-link:not(.active):hover {
+        border-color: transparent;
+        color: $primary-color;
+      }
+    }
+
+    .tab-content {
+      margin-bottom: 1rem;
+    }
+
+    .recover {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.3rem;
+      color: inherit;
+    }
+  }
+}
+
+.login-footer {
+  position: fixed;
   display: flex;
-  justify-content: center;
-  align-items: center;
+
+  bottom: 0;
+  z-index: 1;
 
   width: 100%;
-  background-color: $white;
+  height: $footer-height;
 
-  > .row {
-    width: 80%;
-    min-width: 500px;
-  }
+  align-items: center;
 
-  .nav-tabs {
-    border-bottom: none;
-
-    .nav-link {
-      background: white;
-      font-weight: 700;
-      color: $primary-color;
-      padding: 0.5rem 2rem;
-    }
-
-    .nav-item.show .nav-link,
-    .nav-link.active {
-      border: none;
-      border-bottom: solid 2px $primary-color;
-    }
-
-    .nav-link:not(.active):focus,
-    .nav-link:not(.active):hover {
-      border-color: transparent;
-      color: $primary-color;
-    }
-  }
-
-  .recover {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.3rem;
-    color: inherit;
-  }
+  background-color: $dark;
+  color: rgba($white, 0.7);
 }
