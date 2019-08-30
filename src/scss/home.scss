@@ -1,0 +1,124 @@
+@import "./scss_vars/template_variables";
+
+.home {
+  .widgets-h-340 .widget {
+    height: 340px;
+  }
+
+  .widget {
+    position: relative;
+
+    background-color: $white;
+
+    box-shadow: 0px 5px 10px #00000026;
+    border-radius: 8px;
+
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    .w-title {
+      font-weight: bold;
+      font-size: 1.222222222rem;
+      line-height: 1.666666667rem;
+      letter-spacing: 0.53px;
+    }
+
+    .w-subtitle {
+      color: rgba($dark-gray, 0.5);
+    }
+
+    .widget-footer {
+      position: absolute;
+
+      display: flex;
+      justify-content: center;
+
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+
+      padding-top: 0.5rem;
+
+      border-top: solid 1px $primary-color;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .widget-fatura {
+      letter-spacing: 0.18px;
+      margin-top: 2rem;
+
+      .alert-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $orange;
+
+        height: 30px;
+        border-radius: 15px;
+        padding: 0 15px;
+      }
+
+      .wf-label {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+
+        font-size: 0.666666667rem;
+        line-height: 0;
+        letter-spacing: 0;
+
+        color: $dark-blue;
+      }
+
+      .wf-value {
+      }
+
+      .fatura-reference {
+        display: flex;
+        flex-flow: row nowrap;
+
+        img {
+          margin-right: 2rem;
+        }
+
+        .ref {
+          display: flex;
+          flex-flow: column nowrap;
+
+          flex: 1;
+        }
+      }
+
+      .fatura-payment {
+        display: flex;
+        flex-flow: row nowrap;
+
+        margin-top: 0.5rem;
+      }
+    }
+
+    &.widget-primary {
+      color: $white;
+      background-color: $primary-color;
+
+      .w-subtitle {
+        color: $dark-blue;
+      }
+
+      .widget-footer {
+        border-top-color: $dark-blue;
+
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}

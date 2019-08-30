@@ -38,13 +38,12 @@ main.backoffice {
 
   nav.backoffice-navigation {
     position: relative;
+    display: none;
 
     min-height: 100%;
     width: $navigation-width;
 
     background-color: $primary-color;
-
-    // padding-top: 70px;
 
     .logo {
       display: flex;
@@ -1201,4 +1200,11 @@ body {
   border: none;
   padding: 0;
   margin: 0;
+}
+
+// Mobile responsiveness
+@include media-breakpoint-up(lg) {
+  main.backoffice nav.backoffice-navigation {
+    display: block;
+  }
 }

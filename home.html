@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/theme.min.css">
+  <link rel="stylesheet" href="assets/css/home.min.css">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
 
       <ul class="menu">
         <li>
-          <a href="/home.html">
+          <a href="/home.html" class="active">
             <div class="icon">
               <img src="assets/img/icon_menu_home.svg" alt="">
             </div>
@@ -30,7 +31,7 @@
         </li>
 
         <li>
-          <a href="notificacoes.html" class="active">
+          <a href="notificacoes.html">
             <div class="icon">
               <img src="assets/img/icon_menu_notificacoes.svg" alt="">
               <div class="bullet"></div>
@@ -106,7 +107,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="dadospessoais.html" class="active">
+                    <a href="dadospessoais.html">
                       <div class="icon">
                         <i class="dados"></i>
                       </div>
@@ -251,13 +252,72 @@
       </header>
 
       <div class="backoffice-content">
-        <div class="container">
+        <div class="container home">
           <div class="row">
             <div class="col">
               <div class="page-header">
                 <h1 class="text-primary text-34 text-bold my-5">
-                  Template Page
+                  Home
                 </h1>
+              </div>
+              <!-- /.page-header -->
+
+              <div class="row widgets-h-340">
+                <div class="col-lg-6">
+                  <div class="widget">
+                    <div class="w-title">Histórico de Consumos</div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="widget">
+                    <div class="w-title">Última Leitura</div>
+                    <div class="w-subtitle">12/01/2019</div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="widget widget-primary">
+                    <div class="w-title">Última Fatura</div>
+                    <div class="w-subtitle">12/01/2019</div>
+
+                    <div class="widget-fatura">
+                      <span class="alert-badge text-12 text-bold">Por Pagar</span>
+                      <div class="fatura-reference">
+                        <img src="assets/img/icon_mb.svg" alt="">
+                        <div class="ref">
+                          <div>Fatura 9087654321</div>
+
+                          <span class="wf-label">Referência</span>
+                          <span class="wf-value">345 543 376</span>
+                        </div>
+                      </div>
+                      <!-- /.fatura-reference -->
+
+                      <div class="fatura-payment">
+                        <div>
+                          <span class="wf-label">Pagar até</span>
+                          <span class="wf-value">12/01/2019</span>
+                        </div>
+                        <div>
+                          <span class="wf-label">Entidade</span>
+                          <span class="wf-value">10928</span>
+                        </div>
+                        <div>
+                          <span class="wf-label">Montante</span>
+                          <span class="wf-value">0000,00 &euro;</span>
+                        </div>
+                      </div>
+                      <!-- /.fatura-payment -->
+
+                    </div>
+                    <!-- /.widget-fatura -->
+
+                    <div class="widget-footer">
+                      <a href="faturas.html" class="text-12">Ver faturas</a>
+                    </div>
+                    <!-- /.widget-footer -->
+
+                  </div>
+                </div>
               </div>
             </div>
           </div>
