@@ -369,7 +369,7 @@ main.backoffice {
       border-bottom: solid 2px #f3f5f4;
 
       th {
-        padding: 1.111111111rem;
+        padding: 0.888888889rem;
         font-weight: 400;
         color: rgba($primary-color, 0.5);
       }
@@ -384,11 +384,12 @@ main.backoffice {
         will-change: box-shadow;
 
         td {
-          padding: 1.111111111rem;
+          padding: 0.888888889rem;
           max-width: 0;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
+          color: rgba($dark-gray, 0.5);
         }
 
         &:hover {
@@ -396,7 +397,32 @@ main.backoffice {
 
           td {
             font-weight: 700;
+            color: $dark-gray;
           }
+        }
+      }
+    }
+  }
+
+  &.columns-dark {
+    table thead th {
+      color: $dark-gray;
+    }
+  }
+
+  &.columns-bold {
+    table thead th {
+      font-weight: bold;
+    }
+  }
+
+  &.hover-2 {
+    table tbody tr {
+      &:hover {
+        box-shadow: none;
+
+        td {
+          background-color: rgba($primary-color, 0.1);
         }
       }
     }
@@ -1092,6 +1118,41 @@ body {
 .row.no-gutters > [class*=" col-"] {
   padding-right: 0;
   padding-left: 0;
+}
+
+/**
+* Bootstrap Badges styling
+**/
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 30px;
+
+  font-size: 0.666666667rem;
+  line-height: 1.111111111rem;
+  letter-spacing: 0;
+
+  &.badge-pill {
+    border-radius: 15px;
+    padding: 0 15px;
+  }
+
+  &.badge-warning {
+    background-color: rgba($orange, 0.3);
+    color: $dark;
+  }
+
+  &.badge-success {
+    background-color: rgba($lightgreen, 0.3);
+    color: $dark;
+  }
+
+  &.badge-danger {
+    background-color: rgba($danger, 0.3);
+    color: $dark;
+  }
 }
 
 .contratos {
