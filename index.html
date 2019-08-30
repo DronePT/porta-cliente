@@ -98,7 +98,7 @@
               <nav class="header-navigation">
                 <ul>
                   <li>
-                    <a href="contratos.html">
+                    <a href="#contratos" data-toggle="modal" data-target="#changeContratoModal">
                       <div class="icon">
                         <i class="contratos"></i>
                       </div>
@@ -146,6 +146,78 @@
             </div>
           </div>
         </div>
+
+        <!-- Change selected contact modal -->
+        <div class="modal fade " id="changeContratoModal" tabindex="-1" role="dialog"
+          aria-labelledby="changeContratoModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-contratos" role="document">
+            <div class="modal-content">
+              <div class="modal-body p-6">
+                <button type="button" class="modal-dismiss" data-dismiss="modal" aria-label="Fechar">
+                  <img src="assets/img/icon_modal_dismiss.svg" alt="">
+                </button>
+                <form action="" class="gascan-forms" style="margin: auto;">
+                  <h1 class="text-primary text-34 text-bold text-center m-0 mb-3">Bem-vindo João Costa</h1>
+
+                  <p class="text-center mb-5">Por favor escolha o contrato que pretende consultar</p>
+
+                  <div class="contratos">
+                    <a href="#" class="contrato active">
+                      <i class="notify">
+                        <div class="bullet"></div>
+                      </i>
+
+                      <span class="c-label text-12">Contrato Doméstico N.º</span>
+                      <span class="c-value">123456789</span>
+
+                      <span class="c-label text-12">Morada de Consumo</span>
+                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                    </a>
+                    <!-- /.contrato -->
+
+                    <a href="#" class="contrato">
+                      <i class="notify">
+                        <div class="bullet"></div>
+                      </i>
+
+                      <span class="c-label text-12">Contrato Doméstico N.º</span>
+                      <span class="c-value">123456789</span>
+
+                      <span class="c-label text-12">Morada de Consumo</span>
+                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                    </a>
+                    <!-- /.contrato -->
+
+                    <a href="#" class="contrato">
+                      <i class="notify"></i>
+
+                      <span class="c-label text-12">Contrato Doméstico N.º</span>
+                      <span class="c-value">123456789</span>
+
+                      <span class="c-label text-12">Morada de Consumo</span>
+                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                    </a>
+                    <!-- /.contrato -->
+
+                    <a href="#" class="contrato">
+                      <i class="notify">
+                        <div class="bullet"></div>
+                      </i>
+
+                      <span class="c-label text-12">Contrato Doméstico N.º</span>
+                      <span class="c-value">123456789</span>
+
+                      <span class="c-label text-12">Morada de Consumo</span>
+                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                    </a>
+                    <!-- /.contrato -->
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End: Change selected contact modal -->
 
         <!-- Change logged user password modal -->
         <div class="modal fade" id="changeMyPasswordModal" tabindex="-1" role="dialog"
