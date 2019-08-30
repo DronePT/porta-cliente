@@ -24,7 +24,7 @@
       if ($nav.height() < $window.height()) {
         $nav.css("height", $window.height());
       }
-    }, 50);
+    }, 150);
 
     fixNavigationHeight();
 
