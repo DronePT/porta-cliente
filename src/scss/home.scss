@@ -89,7 +89,7 @@
         flex-flow: row nowrap;
 
         img {
-          margin-right: 2rem;
+          margin-right: 2.7rem;
         }
 
         .ref {
@@ -105,6 +105,16 @@
         flex-flow: row nowrap;
 
         margin-top: 0.5rem;
+
+        > div {
+          flex: 1;
+          display: flex;
+          flex-flow: column nowrap;
+
+          &:first-child {
+            margin-right: 1rem;
+          }
+        }
       }
     }
 

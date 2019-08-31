@@ -362,6 +362,8 @@ main.backoffice {
 
 /** Tables styling  */
 .gc-table {
+  overflow-x: auto;
+
   table {
     width: 100%;
 

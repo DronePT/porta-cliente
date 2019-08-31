@@ -48,11 +48,11 @@ $grid-breakpoints: (
 $grid-gutter-width: 16px;
 
 $container-max-widths: (
-  xxxs: 0,
-  xxs: 320px,
-  xs: 480px,
-  md: 768px,
-  lg: 1024px,
+  xxxs: 100%,
+  xxs: 100%,
+  xs: 100%,
+  md: 100%,
+  lg: 100%,
   xxxl: 1365px
 );
 
