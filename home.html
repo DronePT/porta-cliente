@@ -266,14 +266,41 @@
                 <div class="col-lg-6">
                   <div class="widget">
                     <div class="w-title">Histórico de Consumos</div>
+                    <div id="chart-consumos" class="chart" data-values="50,25,53,40,36,40"
+                      data-labels="Ago,Set,Out,Nov,Dez,Jan">
+                    </div>
                   </div>
                 </div>
+                <!-- / Chart Historico de Consumos -->
+
                 <div class="col-lg-3">
                   <div class="widget">
                     <div class="w-title">Última Leitura</div>
                     <div class="w-subtitle">12/01/2019</div>
+                    <div class="chart-leitura-container">
+                      <div class="cl-hollow">
+                        <div>
+                          3200<span>,56</span>
+                        </div>
+                        <span>m<sup>3</sup></span>
+                      </div>
+                      <div class="cl-bottom">
+                        <span class="label">Média de Consumos</span>
+                        <span class="value">47,49 m<sup>3</sup></span>
+                      </div>
+                      <div id="chart-leitura" class="chart" data-values="60"></div>
+                    </div>
+
+                    <div class="widget-footer">
+                      <a href="leituras.html" class="text-12">Ver leituras</a>
+                    </div>
+                    <!-- /.widget-footer -->
                   </div>
+                  <!-- /.widget -->
+
                 </div>
+                <!-- / Chart Ultima Leitura -->
+
                 <div class="col-lg-3">
                   <div class="widget widget-primary">
                     <div class="w-title">Última Fatura</div>
@@ -559,7 +586,8 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/theme.min.js"></script>
   <script src="assets/js/gascan-forms.min.js"></script>
-  <script src="assets/js/home.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+  <script src="assets/js/home.js"></script>
 </body>
 
 </html>
