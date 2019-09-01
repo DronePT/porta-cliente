@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/theme.min.css">
-  <link rel="stylesheet" href="assets/css/notificacoes.min.css">
+  <link rel="stylesheet" href="assets/css/faturas.min.css">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
         </li>
 
         <li>
-          <a href="notificacoes.html" class="active">
+          <a href="notificacoes.html">
             <div class="icon">
               <img src="assets/img/icon_menu_notificacoes.svg" alt="">
               <div class="bullet"></div>
@@ -51,7 +51,7 @@
         </li>
 
         <li>
-          <a href="faturas.html">
+          <a href="faturas.html" class="active">
             <div class="icon">
               <img src="assets/img/icon_menu_faturas.svg" alt="">
             </div>
@@ -251,20 +251,96 @@
         <!-- End: Change logged user password modal -->
       </header>
 
-      <div class="backoffice-content notificacoes">
+      <div class="backoffice-content faturas">
         <div class="container">
           <div class="row">
             <div class="col">
               <div class="page-header">
                 <h1 class="text-primary text-34 text-bold my-5">
-                  Notificações
+                  As suas faturas
                 </h1>
               </div>
               <!-- /.page-header -->
 
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="paper h-370">
+                    <div class="paper-header">
+                      <h2 class="text-22 text-bold">Histórico de Consumos</h2>
+                    </div>
+                    <!-- /.paper-header -->
+
+                    <div class="paper-content">
+                      <div id="chart-consumos" class="chart" data-values="50,25,53,40,36,40"
+                        data-labels="Ago,Set,Out,Nov,Dez,Jan">
+                      </div>
+                      <!-- /#chart-consumos -->
+                    </div>
+                    <!-- /.paper-content -->
+                  </div>
+                  <!-- /.paper -->
+
+                  <div class="spacer d-lg-none"></div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="paper bg-primary h-370 d-flex flex-column justify-content-between">
+                        <div class="paper-content">
+                          <p class="text-primary-dark m-0 text-center">Periodo de Faturação</p>
+                          <h3 class="text-22 text-white text-bold text-center m-2">Normal</h3>
+
+                          <div class="text-center mt-5">
+                            <img src="assets/img/icon_faturas_pie.svg" alt="">
+                          </div>
+
+                        </div>
+                        <!-- /.paper-content -->
+
+                        <div class="paper-footer">
+                          <div class="divider-primary-dark"></div>
+                          <a href="faturas_periodo.html" class="text-12 text-white d-block text-center pt-3">Alterar</a>
+                        </div>
+                      </div>
+                      <!-- /.paper -->
+                      <div class="spacer d-lg-none"></div>
+                    </div>
+                    <!-- /.col-lg-6 -->
+
+                    <div class="col-lg-6">
+                      <div class="paper bg-primary-dark h-370 d-flex flex-column justify-content-between">
+                        <div class="paper-content">
+                          <p class="text-primary m-0 text-center">Fatura Eletrónica</p>
+                          <h3 class="text-22 text-white text-bold text-center m-2">Activa</h3>
+
+                          <div class="text-center mt-5">
+                            <img src="assets/img/icon_faturas_pdf.svg" alt="">
+                          </div>
+
+                        </div>
+                        <!-- /.paper-content -->
+
+                        <div class="paper-footer">
+                          <div class="divider-primary"></div>
+                          <a href="faturas_eletronica.html"
+                            class="text-12 text-white d-block text-center pt-3">Alterar</a>
+                        </div>
+                      </div>
+                      <!-- /.paper -->
+                      <div class="spacer d-lg-none"></div>
+                    </div>
+                    <!-- /.col-lg-6 -->
+
+                  </div>
+                  <!-- /.row -->
+                </div>
+              </div>
+
+              <div class="spacer-3 d-none d-lg-block"></div>
+
               <div class="paper">
                 <div class="paper-header">
-                  <h2 class="text-22 text-bold">Notificações</h2>
+                  <h2 class="text-22 text-bold">Últimas Faturas</h2>
                   <div>
                     <div class="dropdown">
                       <a class="btn-gc-dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
@@ -284,15 +360,16 @@
 
                 <div class="paper-content">
 
-                  <div class="gc-table mt-3 columns-dark columns-bold">
+                  <div class="gc-table mt-3 columns-dark columns-bold table-faturas">
                     <table border="0">
                       <thead>
                         <tr>
-                          <th style="min-width: 50px;"></th>
-                          <th style="min-width: 250px;">Assunto</th>
-                          <th style="min-width: 180px">Recebido</th>
-                          <th width="100%" style="min-width: 150px">Mensagem</th>
-                          <th style="min-width: 130px;"></th>
+                          <th style="min-width: 75px;"></th>
+                          <th width="25%" style="min-width: 90px;">Fatura Nº</th>
+                          <th width="25%" style="min-width: 120px">Data da Fatura</th>
+                          <th width="25%" style="min-width: 85px;">Estado</th>
+                          <th width="25%" style="min-width: 70px;">Montante</th>
+                          <th style="min-width: 100px; text-align: right;" align="right">Ver detalhe</th>
                         </tr>
                       </thead>
                       <!-- /thead -->
@@ -300,165 +377,77 @@
                       <tbody>
                         <tr class="active">
                           <td>
-                            <i class="icon-mail"></i>
+                            <i class="icon-fatura"></i>
                           </td>
-                          <td>Fatura em atraso</td>
+                          <td>9087654321</td>
                           <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
                           <td>
-                            <i class="icon-mail"></i>
+                            <span class="badge badge-pill w-100 badge-warning">Por pagar</span>
                           </td>
-                          <td>Aviso de corte</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
+                          <td>22,85 &euro;</td>
                           <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Inspeção periódica</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Comunique a sua leitura</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Aviso de corte</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Inspeção periódica</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Comunique a sua leitura</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
+                            <div>
+                              <img src="assets/img/icon_circle_right.svg" alt="Ver">
                             </div>
                           </td>
                         </tr>
 
+                        <tr>
+                          <td>
+                            <i class="icon-fatura"></i>
+                          </td>
+                          <td>9087654321</td>
+                          <td>09/02/2019</td>
+                          <td>
+                            <span class="badge badge-pill w-100 badge-success">Pago</span>
+                          </td>
+                          <td>22,85 &euro;</td>
+                          <td align="right">
+                            <div>
+                              <img src="assets/img/icon_circle_right.svg" alt="Ver">
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <i class="icon-fatura"></i>
+                          </td>
+                          <td>9087654321</td>
+                          <td>09/02/2019</td>
+                          <td>
+                            <span class="badge badge-pill w-100 badge-danger">Não pago</span>
+                          </td>
+                          <td>22,85 &euro;</td>
+                          <td align="right">
+                            <div>
+                              <img src="assets/img/icon_circle_right.svg" alt="Ver">
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <i class="icon-fatura"></i>
+                          </td>
+                          <td>9087654321</td>
+                          <td>09/02/2019</td>
+                          <td>
+                            <span class="badge badge-pill w-100 badge-success">Pago</span>
+                          </td>
+                          <td>22,85 &euro;</td>
+                          <td align="right">
+                            <div>
+                              <img src="assets/img/icon_circle_right.svg" alt="Ver">
+                            </div>
+                          </td>
+                        </tr>
                       </tbody>
                     </table>
 
                     <div class="divider-primary-50"></div>
 
-                    <form method="GET" class="gc-table-pagination my-4" data-number-of-buttons="3" data-page="6"
+                    <form method="GET" class="gc-table-pagination my-4 mr-4" data-number-of-buttons="3" data-page="1"
                       data-total-pages="10">
                     </form>
                   </div>
@@ -482,9 +471,13 @@
   <!-- Scripts to be loaded  -->
   <script src="assets/js/jquery.slim.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/theme.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+
   <script src="assets/js/gascan-forms.min.js"></script>
   <script src="assets/js/pagination.min.js"></script>
+
+  <script src="assets/js/theme.min.js"></script>
+  <script src="assets/js/faturas.js"></script>
 </body>
 
 </html>

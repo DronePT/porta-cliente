@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/theme.min.css">
-  <link rel="stylesheet" href="assets/css/notificacoes.min.css">
+  <link rel="stylesheet" href="assets/css/leituras.min.css">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
         </li>
 
         <li>
-          <a href="notificacoes.html" class="active">
+          <a href="notificacoes.html">
             <div class="icon">
               <img src="assets/img/icon_menu_notificacoes.svg" alt="">
               <div class="bullet"></div>
@@ -42,7 +42,7 @@
         </li>
 
         <li>
-          <a href="leituras.html">
+          <a href="leituras.html" class="active">
             <div class="icon">
               <img src="assets/img/icon_menu_leituras.svg" alt="">
             </div>
@@ -251,34 +251,74 @@
         <!-- End: Change logged user password modal -->
       </header>
 
-      <div class="backoffice-content notificacoes">
+      <div class="backoffice-content leituras">
         <div class="container">
           <div class="row">
             <div class="col">
               <div class="page-header">
                 <h1 class="text-primary text-34 text-bold my-5">
-                  Notificações
+                  As suas leituras
                 </h1>
               </div>
               <!-- /.page-header -->
 
-              <div class="paper">
-                <div class="paper-header">
-                  <h2 class="text-22 text-bold">Notificações</h2>
-                  <div>
-                    <div class="dropdown">
-                      <a class="btn-gc-dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Filtros
-                      </a>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="paper h-370">
+                    <div class="paper-header">
+                      <h2 class="text-22 text-bold">Histórico de Consumos</h2>
+                    </div>
+                    <!-- /.paper-header -->
 
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Filter 1</a>
-                        <a class="dropdown-item" href="#">Filter 2</a>
-                        <a class="dropdown-item" href="#">Filter 3</a>
+                    <div class="paper-content">
+                      <div id="chart-consumos" class="chart" data-values="50,25,53,40,36,40"
+                        data-labels="Ago,Set,Out,Nov,Dez,Jan">
                       </div>
+                      <!-- /#chart-consumos -->
+                    </div>
+                    <!-- /.paper-content -->
+                  </div>
+                  <!-- /.paper -->
+
+                  <div class="spacer d-lg-none"></div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="paper bg-primary h-370 d-flex flex-column justify-content-between">
+                    <div class="paper-content">
+                      <h2 class="text-34 text-bold text-white" style="letter-spacing: 0; max-width: 362px;">
+                        Data recomendada para comunicar leituras
+                      </h2>
+
+                      <p class="text-white mt-4">Reduza estimativas na sua fatura. <br>Comunique as suas leituras entre
+                        o
+                        dia 08
+                        e o dia 10 deste
+                        mês.</p>
+                    </div>
+                    <!-- /.paper-content -->
+
+                    <div class="paper-footer">
+                      <form class="form-inline form-leitura gascan-forms">
+                        <div class="form-group form-group-rounded">
+                          <label for="inputLeitura">Inserir leitura</label>
+                          <input type="text" class="form-control mb-2 mr-sm-2" id="inputLeitura">
+                        </div>
+
+                        <button type="submit" class="btn btn-orange px-4 text-white text-bold">Submeter</button>
+                      </form>
                     </div>
                   </div>
+                  <!-- /.paper -->
+
+                  <div class="spacer d-lg-none"></div>
+                </div>
+              </div>
+
+              <div class="spacer-3 d-none d-lg-block"></div>
+
+              <div class="paper">
+                <div class="paper-header">
+                  <h2 class="text-22 text-bold">Leituras faturadas</h2>
                 </div>
                 <!-- /.paper-header -->
 
@@ -289,10 +329,8 @@
                       <thead>
                         <tr>
                           <th style="min-width: 50px;"></th>
-                          <th style="min-width: 250px;">Assunto</th>
-                          <th style="min-width: 180px">Recebido</th>
-                          <th width="100%" style="min-width: 150px">Mensagem</th>
-                          <th style="min-width: 130px;"></th>
+                          <th width="100%" style="min-width: 150px">Data da Leitura</th>
+                          <th style="min-width: 130px; text-align: right;" align="right">Valor Total</th>
                         </tr>
                       </thead>
                       <!-- /thead -->
@@ -300,165 +338,45 @@
                       <tbody>
                         <tr class="active">
                           <td>
-                            <i class="icon-mail"></i>
+                            <i class="icon-pie"></i>
                           </td>
-                          <td>Fatura em atraso</td>
                           <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
+                          <td align="right">47,40 m<sup>3</sup></td>
                         </tr>
                         <tr>
                           <td>
-                            <i class="icon-mail"></i>
+                            <i class="icon-pie"></i>
                           </td>
-                          <td>Aviso de corte</td>
                           <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
+                          <td align="right">47,40 m<sup>3</sup></td>
                         </tr>
                         <tr>
                           <td>
-                            <i class="icon-mail"></i>
+                            <i class="icon-pie"></i>
                           </td>
-                          <td>Inspeção periódica</td>
                           <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
+                          <td align="right">47,40 m<sup>3</sup></td>
                         </tr>
                         <tr>
                           <td>
-                            <i class="icon-mail"></i>
+                            <i class="icon-pie"></i>
                           </td>
-                          <td>Comunique a sua leitura</td>
                           <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
+                          <td align="right">47,40 m<sup>3</sup></td>
                         </tr>
                         <tr>
                           <td>
-                            <i class="icon-mail"></i>
+                            <i class="icon-pie"></i>
                           </td>
-                          <td>Aviso de corte</td>
                           <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
+                          <td align="right">47,40 m<sup>3</sup></td>
                         </tr>
-                        <tr>
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Inspeção periódica</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Comunique a sua leitura</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-
                       </tbody>
                     </table>
 
                     <div class="divider-primary-50"></div>
 
-                    <form method="GET" class="gc-table-pagination my-4" data-number-of-buttons="3" data-page="6"
+                    <form method="GET" class="gc-table-pagination my-4 mr-4" data-number-of-buttons="3" data-page="6"
                       data-total-pages="10">
                     </form>
                   </div>
@@ -482,9 +400,13 @@
   <!-- Scripts to be loaded  -->
   <script src="assets/js/jquery.slim.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/theme.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+
   <script src="assets/js/gascan-forms.min.js"></script>
   <script src="assets/js/pagination.min.js"></script>
+
+  <script src="assets/js/theme.min.js"></script>
+  <script src="assets/js/leituras.js"></script>
 </body>
 
 </html>

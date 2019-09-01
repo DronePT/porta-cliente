@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/theme.min.css">
-  <link rel="stylesheet" href="assets/css/notificacoes.min.css">
+  <link rel="stylesheet" href="assets/css/faturas.min.css">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
         </li>
 
         <li>
-          <a href="notificacoes.html" class="active">
+          <a href="notificacoes.html">
             <div class="icon">
               <img src="assets/img/icon_menu_notificacoes.svg" alt="">
               <div class="bullet"></div>
@@ -51,7 +51,7 @@
         </li>
 
         <li>
-          <a href="faturas.html">
+          <a href="faturas.html" class="active">
             <div class="icon">
               <img src="assets/img/icon_menu_faturas.svg" alt="">
             </div>
@@ -251,222 +251,138 @@
         <!-- End: Change logged user password modal -->
       </header>
 
-      <div class="backoffice-content notificacoes">
+      <div class="backoffice-content faturas">
         <div class="container">
           <div class="row">
             <div class="col">
               <div class="page-header">
                 <h1 class="text-primary text-34 text-bold my-5">
-                  Notificações
+                  <div class="ph-breadcrumb">As suas faturas / Períodos de Faturação</div>
+                  Períodos de Faturação
                 </h1>
               </div>
               <!-- /.page-header -->
 
-              <div class="paper">
-                <div class="paper-header">
-                  <h2 class="text-22 text-bold">Notificações</h2>
-                  <div>
-                    <div class="dropdown">
-                      <a class="btn-gc-dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Filtros
-                      </a>
-
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Filter 1</a>
-                        <a class="dropdown-item" href="#">Filter 2</a>
-                        <a class="dropdown-item" href="#">Filter 3</a>
+              <form>
+                <div class="paper bg-primary text-white">
+                  <div class="row align-items-center h-100">
+                    <div class="col-lg-3 h-100">
+                      <div class="d-flex align-items-center h-100">
+                        <div class="custom-control custom-radio custom-radio-white mr-6">
+                          <input type="radio" name="plan" value="1" class="custom-control-input" id="plan1" checked>
+                          <label class="custom-control-label" for="plan1"></label>
+                        </div>
+                        <img src="assets/img/icon_faturas_pie.svg" alt="">
                       </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <h2 class="text-22 text-bold mb-3 mt-5 mt-lg-0">
+                        Faturação Normal
+                      </h2>
+                      <p class="mb-5">
+                        O cliente será facturado mensalmente, sendo que, e de acordo com o calendário definido pela
+                        Gascan para a leitura de cada rede, a factura será emitida com base em valores reais de consumo
+                        nos meses em que o contador for lido e com base em valores estimados nos meses em que não se
+                        proceda à leitura do contador.
+                      </p>
                     </div>
                   </div>
                 </div>
-                <!-- /.paper-header -->
+                <!-- /.paper -->
 
-                <div class="paper-content">
+                <div class="spacer-2"></div>
 
-                  <div class="gc-table mt-3 columns-dark columns-bold">
-                    <table border="0">
-                      <thead>
-                        <tr>
-                          <th style="min-width: 50px;"></th>
-                          <th style="min-width: 250px;">Assunto</th>
-                          <th style="min-width: 180px">Recebido</th>
-                          <th width="100%" style="min-width: 150px">Mensagem</th>
-                          <th style="min-width: 130px;"></th>
-                        </tr>
-                      </thead>
-                      <!-- /thead -->
-
-                      <tbody>
-                        <tr class="active">
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Fatura em atraso</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Aviso de corte</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Inspeção periódica</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Comunique a sua leitura</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Aviso de corte</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Inspeção periódica</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <i class="icon-mail"></i>
-                          </td>
-                          <td>Comunique a sua leitura</td>
-                          <td>09/02/2019</td>
-                          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quisquam ducimus eos? Sint
-                            aliquid, in incidunt</td>
-                          <td align="right">
-                            <div class="table-actions">
-                              <a href="#">
-                                <img src="assets/img/icon_bin.svg" alt="Remover">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_star.svg" alt="Favorito">
-                              </a>
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-
-                      </tbody>
-                    </table>
-
-                    <div class="divider-primary-50"></div>
-
-                    <form method="GET" class="gc-table-pagination my-4" data-number-of-buttons="3" data-page="6"
-                      data-total-pages="10">
-                    </form>
+                <div class="paper">
+                  <div class="row align-items-center h-100">
+                    <div class="col-lg-3 h-100">
+                      <div class="d-flex align-items-center h-100">
+                        <div class="custom-control custom-radio mr-6">
+                          <input type="radio" name="plan" value="2" class="custom-control-input" id="plan2">
+                          <label class="custom-control-label" for="plan2"></label>
+                        </div>
+                        <img src="assets/img/icon_faturas_dash.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <h2 class="text-22 text-bold mb-3 mt-5 mt-lg-0">
+                        Faturação por Leitura
+                      </h2>
+                      <p class="mb-5">
+                        O cliente será facturado nos meses em que se proceder à leitura do contador. A periocidade das
+                        leituras depende do
+                        calendário denido pela Gascan para a leitura de cada rede.
+                      </p>
+                    </div>
                   </div>
-                  <!-- /.gc-table -->
-
                 </div>
-                <!-- /.paper-content -->
-              </div>
+                <!-- /.paper -->
+
+                <div class="spacer-2"></div>
+
+                <div class="paper">
+                  <div class="row align-items-center h-100">
+                    <div class="col-lg-3 h-100">
+                      <div class="d-flex align-items-center h-100">
+                        <div class="custom-control custom-radio mr-6">
+                          <input type="radio" name="plan" value="3" class="custom-control-input" id="plan3">
+                          <label class="custom-control-label" for="plan3"></label>
+                        </div>
+                        <img src="assets/img/icon_faturas_calendar.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <h2 class="text-22 text-bold mb-3 mt-5 mt-lg-0">
+                        Facturação de um Valor Mensal Fixo
+                      </h2>
+                      <p>
+                        O cliente será facturado mensalmente com base num valor fixo, em m3, tendo em conta a média do
+                        consumo do cliente, conforme histórico da Gascan.
+                      </p>
+
+                      <p>
+                        Esta modalidade implica a realização de acertos periódicos, através da leitura real do
+                        contador. Por favor escolha a periocidade pretendida para estes acertos:
+                      </p>
+
+                      <div class="my-5">
+                        <p>
+                          <div class="custom-control custom-radio mr-6">
+                            <input type="radio" name="periodo" value="1" class="custom-control-input" id="period1"
+                              checked>
+                            <label class="custom-control-label" for="period1"><strong>Trimestral (4 vezes ao
+                                ano)</strong></label>
+                          </div>
+                        </p>
+                        <p>
+                          <div class="custom-control custom-radio mr-6">
+                            <input type="radio" name="periodo" value="2" class="custom-control-input" id="period2">
+                            <label class="custom-control-label" for="period2">Quadrimestral (3 vezes ao ano)</label>
+                          </div>
+                        </p>
+                        <p>
+                          <div class="custom-control custom-radio mr-6">
+                            <input type="radio" name="periodo" value="3" class="custom-control-input" id="period3">
+                            <label class="custom-control-label" for="period3">Bianual (2 vezes ao ano)</label>
+                          </div>
+                        </p>
+                      </div>
+
+                      <p>
+                        <strong>Nota:</strong> Caso não seja dado acesso ao contador no dia da leitura para acerto, a
+                        Gascan procederá à
+                        facturação por estimativa.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.paper -->
+
+                <div class="d-flex justify-content-between my-5">
+                  <a href="faturas.html" class="btn btn-outline-primary px-5">Voltar</a>
+
+                  <button type="submit" class="btn btn-primary px-5">Pedir alteração</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -482,9 +398,13 @@
   <!-- Scripts to be loaded  -->
   <script src="assets/js/jquery.slim.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/theme.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+
   <script src="assets/js/gascan-forms.min.js"></script>
   <script src="assets/js/pagination.min.js"></script>
+
+  <script src="assets/js/theme.min.js"></script>
+  <script src="assets/js/faturas.js"></script>
 </body>
 
 </html>
