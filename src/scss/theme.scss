@@ -22,6 +22,10 @@ body {
   background-color: $white;
 }
 
+p {
+  letter-spacing: 0.18px;
+}
+
 main.backoffice {
   display: flex;
 
@@ -658,12 +662,6 @@ main.backoffice {
     }
   }
 
-  &.form-group-rounded {
-    border-radius: 25px;
-    border-style: solid;
-    overflow: hidden;
-  }
-
   &.is-disabled {
     border-color: rgba(#eaecec, 0.3);
 
@@ -734,6 +732,22 @@ main.backoffice {
 
   &.is-textarea {
     height: auto;
+  }
+
+  &.form-group-rounded {
+    border-radius: 25px;
+    border-style: solid;
+    overflow: hidden;
+
+    label {
+      left: 25px;
+    }
+
+    input,
+    select,
+    textarea {
+      padding-left: 25px;
+    }
   }
 }
 
@@ -1359,4 +1373,16 @@ body {
     border: none;
     box-shadow: 0px 5px 10px #00000026;
   }
+}
+
+.spacer {
+  height: 1rem;
+}
+
+.spacer-2 {
+  height: 2rem;
+}
+
+.spacer-3 {
+  height: 2.5rem;
 }
