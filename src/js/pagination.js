@@ -66,8 +66,10 @@
           $nextButton.html('<img src="assets/img/icon_chevron_right.svg" alt="Página Seguinte">');
         });
 
-      if (!hasPrevious || page === 1) $prevButton.attr("disabled", true).addClass("disabled");
-      if (!hasNext || page === totalPages) $nextButton.attr("disabled", true).addClass("disabled");
+      console.warn(hasPrevious, page);
+
+      if (hasPrevious === false || page === 1) $prevButton.attr("disabled", true).addClass("disabled");
+      if (hasNext === false || page === totalPages) $nextButton.attr("disabled", true).addClass("disabled");
 
       const pages = [];
 

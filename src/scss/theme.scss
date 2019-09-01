@@ -346,7 +346,7 @@ main.backoffice {
 
     div.backoffice-content {
       background-color: $white;
-      padding-bottom: $footer-height;
+      padding-bottom: $footer-height + 32px;
     }
   }
 
@@ -371,10 +371,25 @@ main.backoffice {
 .paper {
   background-color: $white;
   border-radius: $border-radius;
-  box-shadow: $box-shadow-lg, $box-shadow;
+  // box-shadow: $box-shadow-lg, $box-shadow;
+  box-shadow: 0px 5px 10px rgba(black, 0.15);
+
+  padding: 1rem;
 
   &.paper-sm {
     box-shadow: 0 4px 16px -8px rgba(black, 0.16), 0 0 8px -4px rgba(black, 0.32);
+  }
+
+  .paper-header {
+    height: 80px;
+
+    margin: -1rem -1rem 0;
+    padding: 0 1rem;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -436,16 +451,13 @@ main.backoffice {
     }
   }
 
-  &.hover-2 {
-    table tbody tr {
-      &:hover {
-        box-shadow: none;
+  &.hover-2 table tbody tr:hover {
+    box-shadow: none;
+  }
 
-        td {
-          background-color: rgba($primary-color, 0.1);
-        }
-      }
-    }
+  &.hover-2 table tbody tr:hover td,
+  table tbody tr.active td {
+    background-color: rgba($primary-color, 0.1);
   }
 }
 
@@ -1287,5 +1299,64 @@ body {
 @include media-breakpoint-up(lg) {
   main.backoffice nav.backoffice-navigation {
     display: block;
+  }
+}
+
+.divider-primary-50 {
+  width: 100%;
+  height: 1px;
+  background-color: rgba($primary-color, 0.5);
+}
+
+/** Custom Dropdowns */
+.dropdown {
+  .btn-gc-dropdown {
+    background-color: $light-gray;
+
+    min-width: 160px;
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 15px;
+
+    display: inline-flex;
+    align-items: center;
+
+    color: rgba($dark, 0.5);
+
+    font-size: 0.666666667rem;
+    text-decoration: none;
+
+    &::after {
+      position: absolute;
+
+      content: "";
+      z-index: 1;
+      top: 7.5px;
+      right: 15px;
+
+      width: 12px;
+      height: 12px;
+
+      transform: rotate(135deg);
+
+      clip-path: inset(0 0 20% 20%);
+
+      border: 2px solid $primary-color;
+
+      transition: transform 0.2s ease, top 0.2s ease;
+      will-change: transform, top;
+    }
+  }
+
+  &.show {
+    .btn-gc-dropdown::after {
+      transform: rotate(-45deg);
+      top: 15px;
+    }
+  }
+
+  .dropdown-menu {
+    border: none;
+    box-shadow: 0px 5px 10px #00000026;
   }
 }
