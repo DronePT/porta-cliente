@@ -480,6 +480,13 @@ main.backoffice {
 
   justify-content: space-between;
   align-items: center;
+
+  .ph-breadcrumb {
+    font-size: 0.666666667rem;
+    line-height: 1.111111111rem;
+    font-weight: 400;
+    color: rgba($dark-gray, 0.5);
+  }
 }
 
 /** Text Styling */
@@ -752,8 +759,38 @@ main.backoffice {
 }
 
 .custom-radio {
-  .custom-control-label::before {
-    top: -0.45rem;
+  $radio-width: 30px;
+
+  position: relative;
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+  }
+
+  .custom-control-label {
+    padding-left: 38px;
+
+    &::before {
+      top: 0;
+      left: 0;
+
+      width: $radio-width;
+      height: $radio-width;
+      border-radius: 50%;
+
+      border: solid 2px $primary-color;
+    }
+
+    &::after {
+      top: 2px;
+      left: 2px;
+
+      width: $radio-width - 4px;
+      height: $radio-width - 4px;
+      border-radius: 50%;
+    }
   }
 
   .custom-control-input:checked ~ .custom-control-label::before {
@@ -761,21 +798,14 @@ main.backoffice {
     border: 2px solid #007bff;
   }
   .custom-control-label:hover.custom-control-label::before {
-    box-shadow: 0px 2px 5px rgba(0, 117, 201, 0.6);
-  }
-
-  .custom-control-label::after {
-    top: -0.33rem;
-    left: -1.4rem;
-    width: 1.75rem;
-    height: 1.75rem;
+    box-shadow: 0px 2px 5px rgba($primary-color, 0.6);
   }
 
   .custom-control-input:checked ~ .custom-control-label::after {
     background-image: none;
     background-color: #007bff;
     border-radius: 50%;
-    border: 0.3rem solid white;
+    border: 0.3rem solid #fff;
   }
 
   .custom-control-input:disabled ~ .custom-control-label::before {
@@ -792,6 +822,32 @@ main.backoffice {
     background-image: none;
     border-radius: 50%;
     border: 0.3rem solid #e9ecef;
+  }
+
+  &.custom-radio-white {
+    .custom-control-label {
+      &::before {
+        border-color: $white;
+      }
+
+      &::after {
+        background-color: $primary-color;
+      }
+    }
+
+    .custom-control-input:checked ~ .custom-control-label::before {
+      background-color: $primary-color;
+      border-color: $white;
+    }
+
+    .custom-control-label:hover.custom-control-label::before {
+      box-shadow: 0px 2px 5px rgba($white, 0.6);
+    }
+
+    .custom-control-input:checked ~ .custom-control-label::after {
+      background-color: $white;
+      border-color: $primary-color;
+    }
   }
 }
 

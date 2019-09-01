@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gascan Backoffice</title>
+  <!-- Gobal CSS includes Bootstrap 4.*.* & FontAwesome 5.*.*  -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/theme.min.css">
+  <link rel="stylesheet" href="assets/css/faturas.min.css">
+</head>
+
+<body>
+  <main class="backoffice backoffice-logged">
+    <nav class="backoffice-navigation">
+      <a href="/" class="logo">
+        <img src="assets/img/logo_white.svg" alt="Gascan Logo">
+      </a>
+
+      <ul class="menu">
+        <li>
+          <a href="/home.html">
+            <div class="icon">
+              <img src="assets/img/icon_menu_home.svg" alt="">
+            </div>
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="notificacoes.html">
+            <div class="icon">
+              <img src="assets/img/icon_menu_notificacoes.svg" alt="">
+              <div class="bullet"></div>
+            </div>
+            <span>Notificações</span>
+            <div class="counter-badge">88</div>
+          </a>
+        </li>
+
+        <li>
+          <a href="leituras.html">
+            <div class="icon">
+              <img src="assets/img/icon_menu_leituras.svg" alt="">
+            </div>
+            <span>Leituras</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="faturas.html" class="active">
+            <div class="icon">
+              <img src="assets/img/icon_menu_faturas.svg" alt="">
+            </div>
+            <span>Faturas</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="servicos.html">
+            <div class="icon">
+              <img src="assets/img/icon_menu_servicos.svg" alt="">
+            </div>
+            <span>Serviços & Campanhas</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav-contacts">
+        <li>
+          <div class="contact">
+            <img src="assets/img/icon_nav_phone.svg" alt="">
+            <div class="label text-16 py-1">Piquete de Emergência e Assistência Técnica 24h</div>
+            <div class="number text-22 text-bold">218 425 300</div>
+          </div>
+        </li>
+        <li>
+          <div class="contact">
+            <img src="assets/img/icon_nav_wrench.svg" alt="">
+            <div class="label text-16 py-1">Apoio ao Cliente Dias úteis das 9h ás 19h</div>
+            <div class="number text-22 text-bold">218 425 300</div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="text-center pb-5">
+        <button class="btn btn-sm btn-outline-light">Terminar Sessão</button>
+      </div>
+    </nav>
+
+    <div class="backoffice-container">
+      <header class="backoffice-header">
+        <div class="container">
+          <div class="row">
+            <div class="col d-flex align-items-center justify-content-end">
+              <nav class="header-navigation">
+                <ul>
+                  <li>
+                    <a href="#contratos" data-toggle="modal" data-target="#changeContratoModal">
+                      <div class="icon">
+                        <i class="contratos"></i>
+                      </div>
+                      <span>Contratos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="dadospessoais.html">
+                      <div class="icon">
+                        <i class="dados"></i>
+                      </div>
+                      <span>Dados Pessoais</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- /.header-navigation -->
+
+              <div class="dropdown show">
+                <a href="#" class="user dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <div class="avatar-container d-flex align-items-center mr-3">
+                    <div class="avatar">
+                      <img src="assets/img/user_avatar.svg" alt="User Avatar">
+                      <img src="assets/img/icon_dropdown.svg" alt="" class="icon-dropdown">
+                    </div>
+                  </div>
+
+                  <div class="data-container d-flex flex-column align-items-start">
+                    <span class="role">Olá de novo,</span>
+                    <span class="name text-34 text-bold">João Costa</span>
+                  </div>
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li class="dropdown-item">
+                    <a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                      data-target="#changeMyPasswordModal">Alterar Password</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#" class="btn btn-sm btn-outline-primary">Terminar Sessão</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Change selected contact modal -->
+        <div class="modal fade " id="changeContratoModal" tabindex="-1" role="dialog"
+          aria-labelledby="changeContratoModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-contratos" role="document">
+            <div class="modal-content">
+              <div class="modal-body p-6">
+                <button type="button" class="modal-dismiss" data-dismiss="modal" aria-label="Fechar">
+                  <img src="assets/img/icon_modal_dismiss.svg" alt="">
+                </button>
+                <form action="" class="gascan-forms" style="margin: auto;">
+                  <h1 class="text-primary text-34 text-bold text-center m-0 mb-3">Bem-vindo João Costa</h1>
+
+                  <p class="text-center mb-5">Por favor escolha o contrato que pretende consultar</p>
+
+                  <div class="contratos">
+                    <a href="#" class="contrato active">
+                      <i class="notify">
+                        <div class="bullet"></div>
+                      </i>
+
+                      <span class="c-label text-12">Contrato Doméstico N.º</span>
+                      <span class="c-value">123456789</span>
+
+                      <span class="c-label text-12">Morada de Consumo</span>
+                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                    </a>
+                    <!-- /.contrato -->
+
+                    <a href="#" class="contrato">
+                      <i class="notify">
+                        <div class="bullet"></div>
+                      </i>
+
+                      <span class="c-label text-12">Contrato Doméstico N.º</span>
+                      <span class="c-value">123456789</span>
+
+                      <span class="c-label text-12">Morada de Consumo</span>
+                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                    </a>
+                    <!-- /.contrato -->
+
+                    <a href="#" class="contrato">
+                      <i class="notify"></i>
+
+                      <span class="c-label text-12">Contrato Doméstico N.º</span>
+                      <span class="c-value">123456789</span>
+
+                      <span class="c-label text-12">Morada de Consumo</span>
+                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                    </a>
+                    <!-- /.contrato -->
+
+                    <a href="#" class="contrato">
+                      <i class="notify">
+                        <div class="bullet"></div>
+                      </i>
+
+                      <span class="c-label text-12">Contrato Doméstico N.º</span>
+                      <span class="c-value">123456789</span>
+
+                      <span class="c-label text-12">Morada de Consumo</span>
+                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                    </a>
+                    <!-- /.contrato -->
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End: Change selected contact modal -->
+
+        <!-- Change logged user password modal -->
+        <div class="modal fade" id="changeMyPasswordModal" tabindex="-1" role="dialog"
+          aria-labelledby="changeMyPasswordModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-body p-6">
+                <form action="" class="gascan-forms" style="max-width: 360px; margin: auto;">
+                  <h1 class="text-primary text-34 text-bold text-center m-0 mb-5">Alterar Password</h1>
+
+                  <div class="form-group">
+                    <label for="changePassword">Nova password</label>
+                    <input type="password" autocomplete="new-password" class="form-control" id="changePassword">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="changeConfirmPassword">Confirmar password</label>
+                    <input type="password" autocomplete="new-password" class="form-control" id="changeConfirmPassword">
+                  </div>
+
+                  <div class="d-flex justify-content-between mt-5">
+                    <button type="reset" class="btn btn-outline-primary px-5" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary px-5">Alterar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End: Change logged user password modal -->
+      </header>
+
+      <div class="backoffice-content faturas">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="page-header">
+                <h1 class="text-primary text-34 text-bold my-5">
+                  <div class="ph-breadcrumb">As suas faturas / Períodos de Faturação</div>
+                  Períodos de Faturação
+                </h1>
+              </div>
+              <!-- /.page-header -->
+
+              <form>
+                <div class="paper bg-primary text-white">
+                  <div class="row align-items-center h-100">
+                    <div class="col-lg-3 h-100">
+                      <div class="d-flex align-items-center h-100">
+                        <div class="custom-control custom-radio custom-radio-white mr-6">
+                          <input type="radio" name="plan" value="1" class="custom-control-input" id="plan1" checked>
+                          <label class="custom-control-label" for="plan1"></label>
+                        </div>
+                        <img src="assets/img/icon_faturas_pie.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <h2 class="text-22 text-bold mb-3 mt-5 mt-lg-0">
+                        Faturação Normal
+                      </h2>
+                      <p class="mb-5">
+                        O cliente será facturado mensalmente, sendo que, e de acordo com o calendário definido pela
+                        Gascan para a leitura de cada rede, a factura será emitida com base em valores reais de consumo
+                        nos meses em que o contador for lido e com base em valores estimados nos meses em que não se
+                        proceda à leitura do contador.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.paper -->
+
+                <div class="spacer-2"></div>
+
+                <div class="paper">
+                  <div class="row align-items-center h-100">
+                    <div class="col-lg-3 h-100">
+                      <div class="d-flex align-items-center h-100">
+                        <div class="custom-control custom-radio mr-6">
+                          <input type="radio" name="plan" value="2" class="custom-control-input" id="plan2">
+                          <label class="custom-control-label" for="plan2"></label>
+                        </div>
+                        <img src="assets/img/icon_faturas_dash.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <h2 class="text-22 text-bold mb-3 mt-5 mt-lg-0">
+                        Faturação por Leitura
+                      </h2>
+                      <p class="mb-5">
+                        O cliente será facturado nos meses em que se proceder à leitura do contador. A periocidade das
+                        leituras depende do
+                        calendário denido pela Gascan para a leitura de cada rede.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.paper -->
+
+                <div class="spacer-2"></div>
+
+                <div class="paper">
+                  <div class="row align-items-center h-100">
+                    <div class="col-lg-3 h-100">
+                      <div class="d-flex align-items-center h-100">
+                        <div class="custom-control custom-radio mr-6">
+                          <input type="radio" name="plan" value="3" class="custom-control-input" id="plan3">
+                          <label class="custom-control-label" for="plan3"></label>
+                        </div>
+                        <img src="assets/img/icon_faturas_calendar.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <h2 class="text-22 text-bold mb-3 mt-5 mt-lg-0">
+                        Facturação de um Valor Mensal Fixo
+                      </h2>
+                      <p>
+                        O cliente será facturado mensalmente com base num valor fixo, em m3, tendo em conta a média do
+                        consumo do cliente, conforme histórico da Gascan.
+                      </p>
+
+                      <p>
+                        Esta modalidade implica a realização de acertos periódicos, através da leitura real do
+                        contador. Por favor escolha a periocidade pretendida para estes acertos:
+                      </p>
+
+                      <div class="my-5">
+                        <p>
+                          <div class="custom-control custom-radio mr-6">
+                            <input type="radio" name="periodo" value="1" class="custom-control-input" id="period1"
+                              checked>
+                            <label class="custom-control-label" for="period1"><strong>Trimestral (4 vezes ao
+                                ano)</strong></label>
+                          </div>
+                        </p>
+                        <p>
+                          <div class="custom-control custom-radio mr-6">
+                            <input type="radio" name="periodo" value="2" class="custom-control-input" id="period2">
+                            <label class="custom-control-label" for="period2">Quadrimestral (3 vezes ao ano)</label>
+                          </div>
+                        </p>
+                        <p>
+                          <div class="custom-control custom-radio mr-6">
+                            <input type="radio" name="periodo" value="3" class="custom-control-input" id="period3">
+                            <label class="custom-control-label" for="period3">Bianual (2 vezes ao ano)</label>
+                          </div>
+                        </p>
+                      </div>
+
+                      <p>
+                        <strong>Nota:</strong> Caso não seja dado acesso ao contador no dia da leitura para acerto, a
+                        Gascan procederá à
+                        facturação por estimativa.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.paper -->
+
+                <div class="d-flex justify-content-between my-5">
+                  <a href="faturas.html" class="btn btn-outline-primary px-5">Voltar</a>
+
+                  <button type="submit" class="btn btn-primary px-5">Pedir alteração</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="backoffice-footer text-12">
+      &copy; Copyright 2019 - Gascan. Todos os direitos reservados.
+    </footer>
+  </main>
+  <!-- /.container -->
+
+  <!-- Scripts to be loaded  -->
+  <script src="assets/js/jquery.slim.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+
+  <script src="assets/js/gascan-forms.min.js"></script>
+  <script src="assets/js/pagination.min.js"></script>
+
+  <script src="assets/js/theme.min.js"></script>
+  <script src="assets/js/faturas.js"></script>
+</body>
+
+</html>
