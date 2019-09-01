@@ -1316,9 +1316,22 @@ body {
   }
 }
 
-.divider-primary-50 {
+.divider-primary,
+.divider-primary-50,
+.divider-primary-dark {
   width: 100%;
   height: 1px;
+}
+
+.divider-primary {
+  background-color: $primary-color;
+}
+
+.divider-primary-dark {
+  background-color: $primary-dark;
+}
+
+.divider-primary-50 {
   background-color: rgba($primary-color, 0.5);
 }
 

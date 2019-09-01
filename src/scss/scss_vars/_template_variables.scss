@@ -34,6 +34,8 @@ $body-bg: #4d535c;
 $light-gray: #eaecec;
 $lighten-gray: #f4f6f5;
 
+$primary-dark: $dark-blue;
+
 // You can declare your own variables here $my_super_color: black;
 $grid-breakpoints: (
   xxxs: 0,
@@ -82,6 +84,7 @@ $spacers: (
 
 $theme-colors: (
   primary: $primary-color,
+  primary-dark: $primary-dark,
   orange: $orange,
   light: $light,
   dark: $dark,
