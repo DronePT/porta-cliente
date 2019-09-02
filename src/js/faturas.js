@@ -13,69 +13,75 @@
     /**
      * Build Charts
      */
-    const $chart = $("#chart-consumos");
+    const buildCharts = function() {
+      const $chart = $("#chart-consumos");
 
-    const seriesData = String($chart.data("values") || "")
-      .split(",")
-      .map(v => parseFloat(v));
+      if (!$chart.length) return;
 
-    const xAxisCategories = $chart.data("labels").split(",");
+      const seriesData = String($chart.data("values") || "")
+        .split(",")
+        .map(v => parseFloat(v));
 
-    var optionsConsumos = {
-      chart: {
-        height: 250,
-        type: "line",
-        fontFamily: "Roboto",
-        zoom: {
-          enabled: false
-        }
-      },
-      dataLabels: {
-        enabled: false
-      },
-      stroke: {
-        curve: "smooth",
-        width: 3,
-        colors: ["#0075c9"]
-      },
-      series: [
-        {
-          name: "Consumos",
-          data: seriesData
-        }
-      ],
-      grid: {
-        show: true,
-        xaxis: {
-          lines: {
-            show: true
+      const xAxisCategories = $chart.data("labels").split(",");
+
+      var optionsConsumos = {
+        chart: {
+          height: 250,
+          type: "line",
+          fontFamily: "Roboto",
+          zoom: {
+            enabled: false
           }
         },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: "smooth",
+          width: 3,
+          colors: ["#0075c9"]
+        },
+        series: [
+          {
+            name: "Consumos",
+            data: seriesData
+          }
+        ],
+        grid: {
+          show: true,
+          xaxis: {
+            lines: {
+              show: true
+            }
+          },
+          yaxis: {
+            lines: {
+              show: false
+            }
+          }
+        },
+        xaxis: {
+          categories: xAxisCategories
+        },
         yaxis: {
-          lines: {
+          labels: {
             show: false
           }
+        },
+        markers: {
+          size: 5,
+          hover: {
+            size: 7,
+            sizeOffset: 3
+          }
         }
-      },
-      xaxis: {
-        categories: xAxisCategories
-      },
-      yaxis: {
-        labels: {
-          show: false
-        }
-      },
-      markers: {
-        size: 5,
-        hover: {
-          size: 7,
-          sizeOffset: 3
-        }
-      }
+      };
+
+      var chart = new ApexCharts($chart[0], optionsConsumos);
+
+      chart.render();
     };
 
-    var chart = new ApexCharts($chart[0], optionsConsumos);
-
-    chart.render();
+    buildCharts();
   });
 })($);

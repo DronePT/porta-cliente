@@ -80,4 +80,31 @@
       }
     }
   }
+
+  .form-fatura-eletronica {
+    display: flex;
+    flex-flow: row nowrap;
+
+    .form-group {
+      flex: 1;
+      margin-right: 1rem;
+      margin-bottom: 0;
+
+      background-color: rgba($white, 0.15);
+
+      border: none;
+
+      &.is-empty:not(.is-focus):not(.has-error):not(.is-disabled) label,
+      label {
+        color: rgba($white, 0.5);
+        border: none;
+      }
+
+      input {
+        width: 100%;
+        color: $white;
+        border: none;
+      }
+    }
+  }
 }
