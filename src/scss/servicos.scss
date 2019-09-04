@@ -142,4 +142,32 @@
   .widgets-spacer {
     height: 2rem;
   }
+
+  .form-contactar {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .form-group {
+      flex: 1;
+      margin-bottom: 0.5rem;
+
+      background-color: rgba($white, 0.15);
+
+      &.is-empty:not(.is-focus):not(.has-error):not(.is-disabled) label,
+      label {
+        color: rgba($white, 0.5);
+      }
+
+      input {
+        width: 100%;
+        color: $white;
+      }
+    }
+  }
+
+  .bg-blue {
+    background-image: url(../img/bg_blue.png);
+    background-size: 200%;
+    background-position: center 60%;
+  }
 }
