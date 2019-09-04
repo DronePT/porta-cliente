@@ -1,0 +1,145 @@
+@import "./scss_vars/template_variables";
+
+.servicos {
+  .widget {
+    position: relative;
+
+    background-color: $white;
+
+    box-shadow: 0px 5px 10px #00000026;
+    border-radius: 8px;
+
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    .w-title {
+      font-weight: bold;
+      font-size: 1.222222222rem;
+      line-height: 1.666666667rem;
+      letter-spacing: 0.53px;
+    }
+
+    .w-subtitle {
+      color: rgba($dark-gray, 0.5);
+    }
+
+    .widget-footer {
+      position: absolute;
+
+      display: flex;
+      justify-content: center;
+
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+
+      padding-top: 0.5rem;
+
+      border-top: solid 1px $primary-color;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    &.widget-primary {
+      color: $white;
+      background-color: $primary-color;
+
+      .w-subtitle {
+        color: $dark-blue;
+      }
+
+      .widget-footer {
+        border-top-color: $dark-blue;
+
+        a {
+          color: $white;
+        }
+      }
+    }
+
+    &.with-footer {
+      padding-bottom: 3rem;
+    }
+
+    &.widget-news {
+      display: flex;
+      align-items: flex-end;
+
+      background-image: linear-gradient(to bottom, $primary-color, $dark-blue);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      height: 292px;
+
+      .widget-news-footer {
+        display: flex;
+        flex-flow: row nowrap;
+
+        justify-content: space-between;
+        align-items: flex-end;
+
+        width: 100%;
+
+        .details {
+          display: flex;
+          flex-flow: column nowrap;
+          flex: 1;
+        }
+
+        a.view-more {
+          position: relative;
+          padding-right: 1.4rem;
+          width: fit-content;
+
+          &::after {
+            position: absolute;
+
+            content: "";
+            z-index: 1;
+            right: 0.5rem;
+
+            width: 12px;
+            height: 12px;
+
+            transform: rotate(45deg);
+
+            clip-path: inset(0 0 20% 20%);
+
+            border: 2px solid #ffffff;
+          }
+
+          &:hover {
+            &::after {
+              border-color: $dark;
+            }
+          }
+        }
+      }
+
+      &.service-1 {
+        background-image: url(../img/servicos_bg_1.svg), linear-gradient(to bottom, $primary-color, $dark-blue);
+        background-size: auto 200px, cover;
+        background-position: -40px center, center;
+      }
+
+      &.service-2 {
+        background-image: url(../img/servicos_bg_2.svg), linear-gradient(to bottom, $primary-color, $dark-blue);
+        background-size: auto 275px, cover;
+        background-position: -80px 40px, center;
+      }
+
+      &.service-3 {
+        background-image: url(../img/servicos_bg_3.svg), linear-gradient(to bottom, $primary-color, $dark-blue);
+        background-size: auto 230px, cover;
+        background-position: -170px 10px, center;
+      }
+    }
+  }
+
+  .widgets-spacer {
+    height: 2rem;
+  }
+}
