@@ -22,6 +22,13 @@ body {
   background-color: $white;
 }
 
+@include media-breakpoint-down(md) {
+  html,
+  body {
+    font-size: 16px;
+  }
+}
+
 p {
   letter-spacing: 0.18px;
 }
@@ -521,6 +528,13 @@ main.backoffice {
 .text-48 {
   font-size: 2.666666667rem;
   line-height: 3.222222222rem;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
 }
 
 /** Buttons Styling */
@@ -1213,8 +1227,8 @@ body {
 
 /** bootstrap grid styling */
 .row.no-gutters {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -8px;
+  margin-left: -8px;
 }
 .row.no-gutters > [class^="col-"],
 .row.no-gutters > [class*=" col-"] {

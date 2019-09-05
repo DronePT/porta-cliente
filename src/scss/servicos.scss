@@ -1,4 +1,5 @@
 @import "./scss_vars/template_variables";
+@import "./bootstrap4/mixins/breakpoints";
 
 .servicos {
   .widget {
@@ -169,5 +170,17 @@
     background-image: url(../img/bg_blue.png);
     background-size: 200%;
     background-position: center 60%;
+  }
+
+  .campaign-subscribe {
+    background-image: url(../img/servicos_bg_4.svg);
+    background-position: right top;
+    background-size: cover;
+  }
+
+  @include media-breakpoint-down(md) {
+    .img-50 {
+      width: 60px;
+    }
   }
 }
