@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gascan Backoffice</title>
+  <!-- Gobal CSS includes Bootstrap 4.*.* & FontAwesome 5.*.*  -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/theme.min.css">
+  <link rel="stylesheet" href="assets/css/servicos.min.css">
+</head>
+
+<body>
+  <main class="backoffice backoffice-logged">
+    <nav class="backoffice-navigation">
+      <a href="/" class="logo">
+        <img src="assets/img/logo_white.svg" alt="Gascan Logo">
+      </a>
+
+      <ul class="menu">
+        <li>
+          <a href="/home.html">
+            <div class="icon">
+              <img src="assets/img/icon_menu_home.svg" alt="">
+            </div>
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="notificacoes.html">
+            <div class="icon">
+              <img src="assets/img/icon_menu_notificacoes.svg" alt="">
+              <div class="bullet"></div>
+            </div>
+            <span>Notificações</span>
+            <div class="counter-badge">88</div>
+          </a>
+        </li>
+
+        <li>
+          <a href="leituras.html">
+            <div class="icon">
+              <img src="assets/img/icon_menu_leituras.svg" alt="">
+            </div>
+            <span>Leituras</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="faturas.html">
+            <div class="icon">
+              <img src="assets/img/icon_menu_faturas.svg" alt="">
+            </div>
+            <span>Faturas</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="servicos.html" class="active">
+            <div class="icon">
+              <img src="assets/img/icon_menu_servicos.svg" alt="">
+            </div>
+            <span>Serviços & Campanhas</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav-contacts">
+        <li>
+          <div class="contact">
+            <img src="assets/img/icon_nav_phone.svg" alt="">
+            <div class="label text-16 py-1">Piquete de Emergência e Assistência Técnica 24h</div>
+            <div class="number text-22 text-bold">218 425 300</div>
+          </div>
+        </li>
+        <li>
+          <div class="contact">
+            <img src="assets/img/icon_nav_wrench.svg" alt="">
+            <div class="label text-16 py-1">Apoio ao Cliente Dias úteis das 9h ás 19h</div>
+            <div class="number text-22 text-bold">218 425 300</div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="text-center pb-5">
+        <button class="btn btn-sm btn-outline-light">Terminar Sessão</button>
+      </div>
+    </nav>
+
+    <div class="backoffice-container servicos">
+      <header class="backoffice-header">
+        <div class="container">
+          <div class="row">
+            <div class="col d-flex align-items-center justify-content-end">
+              <nav class="header-navigation">
+                <ul>
+                  <li>
+                    <a href="#contratos" data-toggle="modal" data-target="#changeContratoModal">
+                      <div class="icon">
+                        <i class="contratos"></i>
+                      </div>
+                      <span>Contratos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="dadospessoais.html">
+                      <div class="icon">
+                        <i class="dados"></i>
+                      </div>
+                      <span>Dados Pessoais</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- /.header-navigation -->
+
+              <div class="dropdown show">
+                <a href="#" class="user dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <div class="avatar-container d-flex align-items-center mr-3">
+                    <div class="avatar">
+                      <img src="assets/img/user_avatar.svg" alt="User Avatar">
+                      <img src="assets/img/icon_dropdown.svg" alt="" class="icon-dropdown">
+                    </div>
+                  </div>
+
+                  <div class="data-container d-flex flex-column align-items-start">
+                    <span class="role">Olá de novo,</span>
+                    <span class="name text-34 text-bold">João Costa</span>
+                  </div>
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li class="dropdown-item">
+                    <a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                      data-target="#changeMyPasswordModal">Alterar Password</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="#" class="btn btn-sm btn-outline-primary">Terminar Sessão</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Change selected contact modal -->
+        <div class="modal fade " id="changeContratoModal" tabindex="-1" role="dialog"
+          aria-labelledby="changeContratoModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-contratos" role="document">
+            <div class="modal-content">
+              <div class="modal-body p-6">
+                <button type="button" class="modal-dismiss" data-dismiss="modal" aria-label="Fechar">
+                  <img src="assets/img/icon_modal_dismiss.svg" alt="">
+                </button>
+                <form action="" class="gascan-forms" style="margin: auto;">
+                  <h1 class="text-primary text-34 text-bold text-center m-0 mb-3">Bem-vindo João Costa</h1>
+
+                  <p class="text-center mb-5">Por favor escolha o contrato que pretende consultar</p>
+
+                  <div class="contratos">
+                    <a href="#" class="contrato active">
+                      <i class="notify">
+                        <div class="bullet"></div>
+                      </i>
+
+                      <span class="c-label text-12">Contrato Doméstico N.º</span>
+                      <span class="c-value">123456789</span>
+
+                      <span class="c-label text-12">Morada de Consumo</span>
+                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                    </a>
+                    <!-- /.contrato -->
+
+                    <a href="#" class="contrato">
+                      <i class="notify">
+                        <div class="bullet"></div>
+                      </i>
+
+                      <span class="c-label text-12">Contrato Doméstico N.º</span>
+                      <span class="c-value">123456789</span>
+
+                      <span class="c-label text-12">Morada de Consumo</span>
+                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                    </a>
+                    <!-- /.contrato -->
+
+                    <a href="#" class="contrato">
+                      <i class="notify"></i>
+
+                      <span class="c-label text-12">Contrato Doméstico N.º</span>
+                      <span class="c-value">123456789</span>
+
+                      <span class="c-label text-12">Morada de Consumo</span>
+                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                    </a>
+                    <!-- /.contrato -->
+
+                    <a href="#" class="contrato">
+                      <i class="notify">
+                        <div class="bullet"></div>
+                      </i>
+
+                      <span class="c-label text-12">Contrato Doméstico N.º</span>
+                      <span class="c-value">123456789</span>
+
+                      <span class="c-label text-12">Morada de Consumo</span>
+                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                    </a>
+                    <!-- /.contrato -->
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End: Change selected contact modal -->
+
+        <!-- Change logged user password modal -->
+        <div class="modal fade" id="changeMyPasswordModal" tabindex="-1" role="dialog"
+          aria-labelledby="changeMyPasswordModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-body p-6">
+                <form action="" class="gascan-forms" style="max-width: 360px; margin: auto;">
+                  <h1 class="text-primary text-34 text-bold text-center m-0 mb-5">Alterar Password</h1>
+
+                  <div class="form-group">
+                    <label for="changePassword">Nova password</label>
+                    <input type="password" autocomplete="new-password" class="form-control" id="changePassword">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="changeConfirmPassword">Confirmar password</label>
+                    <input type="password" autocomplete="new-password" class="form-control" id="changeConfirmPassword">
+                  </div>
+
+                  <div class="d-flex justify-content-between mt-5">
+                    <button type="reset" class="btn btn-outline-primary px-5" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary px-5">Alterar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End: Change logged user password modal -->
+      </header>
+
+      <div class="backoffice-content">
+        <div class="container">
+          <div class="page-header">
+            <h1 class="text-primary text-34 text-bold my-5">
+              <div class="ph-breadcrumb">Serviços & Campanhas / Assistência Técnica de Manutenção</div>
+              Assistência Técnica de Manutenção
+            </h1>
+          </div>
+          <!-- /.page-header -->
+
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="bg-blue mb-5" style="height: 350px;"></div>
+
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore
+                magna aliquam erat volutpat.</p>
+
+              <p>Ut wisi enim ad minim veniam, quis nostrud exerci Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat:
+              </p>
+
+              <ul>
+                <li>A subscrição e a manutenção do serviço é totalmente gratuita.</li>
+                <li>Ao aderir à fatura eletrónica passa a receber a sua fatura mensal, com toda a comodidade e
+                  segurança, no endereço de
+                  e‐mail que indicar no ato de adesão ao serviço. A fatura eletrónica substitui e tem o mesmo valor
+                  legal da fatura em
+                  papel.</li>
+                <li>Ao utilizar a fatura eletrónica está a proteger o ambiente e assim, a dar o seu contributo para
+                  melhorar o equilíbrio
+                  ambiental do nosso planeta.</li>
+                <li>Poderá aceder à sua fatura com maior facilidade e rapidez, evitando riscos de extravio e atrasos de
+                  correspondência.</li>
+                <li>Poderá consultar online o histórico de faturação, mantendo assim um maior controlo.</li>
+                <li>A fatura eletrónica garante total privacidade e segurança, sendo devidamente certificada, acessível
+                  apenas no seu
+                  e‐mail.</li>
+              </ul>
+
+              <a href="servicos.html" class="btn btn-outline-primary px-5 mt-5">Voltar</a>
+
+            </div>
+            <div class="offset-lg-1 col-lg-4">
+              <div class="paper bg-primary text-white">
+                <h2 class="text-34 text-bold">Ficou com dúvidas ou quer fazer um agendamento?</h2>
+
+                <div class="d-flex align-items-start my-5">
+                  <img src="assets/img/icon_nav_phone.svg" width="50" alt="" class="mr-3">
+                  <div class="d-flex flex-column">
+                    <span class="text-bold">Apoio ao Cliente</span>
+                    <span class="text-22 text-bold">218 425 300</span>
+                    <span>Dias úteis das 09h00 às 19h00</span>
+                  </div>
+                </div>
+
+                <h3 class="text-22 text-bold text-center">Envie-nos um E-mail</h3>
+                <a href="#enviar-email" class="btn btn-orange text-white text-bold d-flex">Enviar E-mail</a>
+
+                <form class="form-contactar gascan-forms mt-5 mb-3">
+                  <h3 class="text-22 text-bold text-center">Quer ser contactado?</h3>
+
+                  <div class="form-group form-group-rounded">
+                    <label for="inputLeitura">Telefone ou telemóvel</label>
+                    <input type="text" class="form-control" id="inputLeitura">
+                  </div>
+
+                  <button type="submit" class="btn btn-orange px-4 text-white text-bold">Liguem-me</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- /.row -->
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <footer class="backoffice-footer text-12">
+      &copy; Copyright 2019 - Gascan. Todos os direitos reservados.
+    </footer>
+  </main>
+  <!-- /.container -->
+
+  <!-- Scripts to be loaded  -->
+  <script src="assets/js/jquery.slim.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.min.js"></script>
+  <script src="assets/js/gascan-forms.min.js"></script>
+  <script src="assets/js/servicos.js"></script>
+</body>
+
+</html>
