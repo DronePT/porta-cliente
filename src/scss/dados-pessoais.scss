@@ -1,0 +1,40 @@
+@import "./scss_vars/template_variables";
+@import "./bootstrap4/mixins/breakpoints";
+
+.dados-pessoais {
+  .form-contactar {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .form-group {
+      flex: 1;
+      margin-bottom: 0.5rem;
+
+      background-color: rgba($white, 0.15);
+
+      &.is-empty:not(.is-focus):not(.has-error):not(.is-disabled) label,
+      label {
+        color: rgba($white, 0.5);
+      }
+
+      input {
+        width: 100%;
+        color: $white;
+      }
+    }
+  }
+
+  .write-mode {
+    display: none !important;
+  }
+
+  .is-edit {
+    .read-mode {
+      display: none !important;
+    }
+
+    .write-mode {
+      display: flex !important;
+    }
+  }
+}

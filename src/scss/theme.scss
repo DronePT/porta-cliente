@@ -3,7 +3,7 @@
 @import "./bootstrap4/mixins/breakpoints";
 
 // WRITE YOUR CUSTOM SCSS FROM HERE //
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
 
 @import url("../fonts/avenir/style.css");
 
@@ -12,6 +12,7 @@ body {
   font-family: $font-family;
   font-size: 18px;
   font-weight: 400;
+  letter-spacing: 0.18px;
 
   line-height: 1.5555555556rem;
 
@@ -501,13 +502,18 @@ main.backoffice {
   font-family: "Avenir Next LT Pro Heavy", $font-family;
 }
 
+.text-dark-50 {
+  color: rgba($dark-gray, 0.5);
+}
+
 .text-bold {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .text-12 {
-  font-size: 0.666666667rem !important;
-  line-height: 1.111111111rem !important;
+  font-size: 12px !important;
+  line-height: 20px !important;
+  letter-spacing: 0px;
 }
 
 .text-16 {
@@ -516,13 +522,15 @@ main.backoffice {
 }
 
 .text-22 {
-  font-size: 1.25rem;
+  font-size: 1.222222222rem;
   line-height: 1.7rem;
+  letter-spacing: 0.53px;
 }
 
 .text-34 {
   font-size: 1.8888888889rem;
   line-height: 2.4444444444rem;
+  letter-spacing: 0;
 }
 
 .text-48 {
@@ -572,6 +580,12 @@ main.backoffice {
     background-color: #dbdcde;
     border-color: #dbdcde;
     color: #94979c;
+  }
+
+  &.btn-outline-primary.disabled,
+  &.btn-outline-primary:disabled {
+    color: #94979c;
+    border-color: #dbdcde;
   }
 }
 
@@ -1468,4 +1482,16 @@ body {
 
 .spacer-3 {
   height: 2.5rem;
+}
+
+.btn-facebook {
+  position: relative;
+
+  img {
+    position: absolute;
+    left: 10px;
+  }
+  span {
+    padding-left: 36px;
+  }
 }
