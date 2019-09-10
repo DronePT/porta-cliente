@@ -1,4 +1,5 @@
 @import "./scss_vars/template_variables";
+@import "./bootstrap4/mixins/breakpoints";
 
 $footer-height: 50px;
 
@@ -73,6 +74,23 @@ body,
       align-items: center;
       margin-bottom: 1.3rem;
       color: inherit;
+    }
+
+    /* Mobile responsiveness */
+    @include media-breakpoint-down(md) {
+      padding-top: 110px;
+
+      .row {
+        width: 100%;
+        min-width: auto;
+
+        h1 {
+          font-size: 1.25rem;
+          line-height: 1.8125rem;
+          letter-spacing: 0px;
+          width: 75%;
+        }
+      }
     }
   }
 }
