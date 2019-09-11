@@ -15,84 +15,93 @@
 
 <body>
   <main class="backoffice backoffice-logged">
-    <nav class="backoffice-navigation">
-      <a href="/" class="logo">
-        <img src="assets/img/logo_white.svg" alt="Gascan Logo">
-      </a>
+    <div class="backoffice-navigation-container">
+      <nav class="backoffice-navigation">
+        <a href="/" class="logo d-none d-lg-flex">
+          <img src="assets/img/logo_white.svg" alt="Gascan Logo">
+        </a>
 
-      <ul class="menu">
-        <li>
-          <a href="/home.html">
-            <div class="icon">
-              <img src="assets/img/icon_menu_home.svg" alt="">
-            </div>
-            <span>Home</span>
+        <div class="backoffice-navigation-header d-flex d-lg-none justify-content-between p-3 pb-5">
+          <a href="#close" class="main-nav-toggle">
+            <img src="assets/img/icon_close.svg" alt="">
           </a>
-        </li>
+          <img src="assets/img/logo_white.svg" height="30" alt="">
+        </div>
 
-        <li>
-          <a href="notificacoes.html" class="active">
-            <div class="icon">
-              <img src="assets/img/icon_menu_notificacoes.svg" alt="">
-              <div class="bullet"></div>
+        <ul class="menu">
+          <li>
+            <a href="/home.html">
+              <div class="icon">
+                <img src="assets/img/icon_menu_home.svg" alt="">
+              </div>
+              <span>Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="notificacoes.html" class="active">
+              <div class="icon">
+                <img src="assets/img/icon_menu_notificacoes.svg" alt="">
+                <div class="bullet"></div>
+              </div>
+              <span>Notificações</span>
+              <div class="counter-badge">88</div>
+            </a>
+          </li>
+
+          <li>
+            <a href="leituras.html">
+              <div class="icon">
+                <img src="assets/img/icon_menu_leituras.svg" alt="">
+              </div>
+              <span>Leituras</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="faturas.html">
+              <div class="icon">
+                <img src="assets/img/icon_menu_faturas.svg" alt="">
+              </div>
+              <span>Faturas</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="servicos.html">
+              <div class="icon">
+                <img src="assets/img/icon_menu_servicos.svg" alt="">
+              </div>
+              <span>Serviços & Campanhas</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav-contacts">
+          <li>
+            <div class="contact">
+              <img src="assets/img/icon_nav_phone.svg" alt="">
+              <div class="label text-16 py-1">Piquete de Emergência e Assistência Técnica 24h</div>
+              <div class="number text-22 text-bold">218 425 300</div>
             </div>
-            <span>Notificações</span>
-            <div class="counter-badge">88</div>
-          </a>
-        </li>
-
-        <li>
-          <a href="leituras.html">
-            <div class="icon">
-              <img src="assets/img/icon_menu_leituras.svg" alt="">
+          </li>
+          <li>
+            <div class="contact">
+              <img src="assets/img/icon_nav_wrench.svg" alt="">
+              <div class="label text-16 py-1">Apoio ao Cliente Dias úteis das 9h ás 19h</div>
+              <div class="number text-22 text-bold">218 425 300</div>
             </div>
-            <span>Leituras</span>
-          </a>
-        </li>
+          </li>
+        </ul>
 
-        <li>
-          <a href="faturas.html">
-            <div class="icon">
-              <img src="assets/img/icon_menu_faturas.svg" alt="">
-            </div>
-            <span>Faturas</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="servicos.html">
-            <div class="icon">
-              <img src="assets/img/icon_menu_servicos.svg" alt="">
-            </div>
-            <span>Serviços & Campanhas</span>
-          </a>
-        </li>
-      </ul>
-
-      <ul class="nav-contacts">
-        <li>
-          <div class="contact">
-            <img src="assets/img/icon_nav_phone.svg" alt="">
-            <div class="label text-16 py-1">Piquete de Emergência e Assistência Técnica 24h</div>
-            <div class="number text-22 text-bold">218 425 300</div>
-          </div>
-        </li>
-        <li>
-          <div class="contact">
-            <img src="assets/img/icon_nav_wrench.svg" alt="">
-            <div class="label text-16 py-1">Apoio ao Cliente Dias úteis das 9h ás 19h</div>
-            <div class="number text-22 text-bold">218 425 300</div>
-          </div>
-        </li>
-      </ul>
-
-      <div class="text-center pb-5">
-        <button class="btn btn-sm btn-outline-light">Terminar Sessão</button>
-      </div>
-    </nav>
+        <div class="text-center pb-5">
+          <button class="btn btn-sm btn-outline-light">Terminar Sessão</button>
+        </div>
+      </nav>
+    </div>
 
     <div class="backoffice-container">
-      <header class="backoffice-header">
+      <header class="backoffice-header d-none d-lg-block">
         <div class="container">
           <div class="row">
             <div class="col d-flex align-items-center justify-content-end">
@@ -147,109 +156,145 @@
             </div>
           </div>
         </div>
-
-        <!-- Change selected contact modal -->
-        <div class="modal fade " id="changeContratoModal" tabindex="-1" role="dialog"
-          aria-labelledby="changeContratoModalTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-contratos" role="document">
-            <div class="modal-content">
-              <div class="modal-body p-6">
-                <button type="button" class="modal-dismiss" data-dismiss="modal" aria-label="Fechar">
-                  <img src="assets/img/icon_modal_dismiss.svg" alt="">
-                </button>
-                <form action="" class="gascan-forms" style="margin: auto;">
-                  <h1 class="text-primary text-34 text-bold text-center m-0 mb-3">Bem-vindo João Costa</h1>
-
-                  <p class="text-center mb-5">Por favor escolha o contrato que pretende consultar</p>
-
-                  <div class="contratos">
-                    <a href="#" class="contrato active">
-                      <i class="notify">
-                        <div class="bullet"></div>
-                      </i>
-
-                      <span class="c-label text-12">Contrato Doméstico N.º</span>
-                      <span class="c-value">123456789</span>
-
-                      <span class="c-label text-12">Morada de Consumo</span>
-                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
-                    </a>
-                    <!-- /.contrato -->
-
-                    <a href="#" class="contrato">
-                      <i class="notify">
-                        <div class="bullet"></div>
-                      </i>
-
-                      <span class="c-label text-12">Contrato Doméstico N.º</span>
-                      <span class="c-value">123456789</span>
-
-                      <span class="c-label text-12">Morada de Consumo</span>
-                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
-                    </a>
-                    <!-- /.contrato -->
-
-                    <a href="#" class="contrato">
-                      <i class="notify"></i>
-
-                      <span class="c-label text-12">Contrato Doméstico N.º</span>
-                      <span class="c-value">123456789</span>
-
-                      <span class="c-label text-12">Morada de Consumo</span>
-                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
-                    </a>
-                    <!-- /.contrato -->
-
-                    <a href="#" class="contrato">
-                      <i class="notify">
-                        <div class="bullet"></div>
-                      </i>
-
-                      <span class="c-label text-12">Contrato Doméstico N.º</span>
-                      <span class="c-value">123456789</span>
-
-                      <span class="c-label text-12">Morada de Consumo</span>
-                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
-                    </a>
-                    <!-- /.contrato -->
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End: Change selected contact modal -->
-
-        <!-- Change logged user password modal -->
-        <div class="modal fade" id="changeMyPasswordModal" tabindex="-1" role="dialog"
-          aria-labelledby="changeMyPasswordModalTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-body p-6">
-                <form action="" class="gascan-forms" style="max-width: 360px; margin: auto;">
-                  <h1 class="text-primary text-34 text-bold text-center m-0 mb-5">Alterar Password</h1>
-
-                  <div class="form-group">
-                    <label for="changePassword">Nova password</label>
-                    <input type="password" autocomplete="new-password" class="form-control" id="changePassword">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="changeConfirmPassword">Confirmar password</label>
-                    <input type="password" autocomplete="new-password" class="form-control" id="changeConfirmPassword">
-                  </div>
-
-                  <div class="d-flex justify-content-between mt-5">
-                    <button type="reset" class="btn btn-outline-primary px-5" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary px-5">Alterar</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End: Change logged user password modal -->
       </header>
+
+      <header class="backoffice-header backoffice-header-mobile d-block d-lg-none">
+        <ul class="nav-mobile d-flex align-items-center justify-content-between">
+          <li>
+            <a href="#" class="main-nav-toggle">
+              <img src="assets/img/icon_burger.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <img src="assets/img/logo_white_blue.svg" alt="" height="30">
+          </li>
+          <li>
+            <div class="dropdown show">
+              <a href="#" class="user dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <div class="avatar-container d-flex align-items-center">
+                  <div class="avatar">
+                    <img src="assets/img/user_avatar.svg" alt="User Avatar">
+                  </div>
+                </div>
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                <li class="dropdown-item">
+                  <a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                    data-target="#changeMyPasswordModal">Alterar
+                    Password</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#" class="btn btn-sm btn-outline-primary">Terminar Sessão</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </header>
+
+      <!-- Change selected contact modal -->
+      <div class="modal fade " id="changeContratoModal" tabindex="-1" role="dialog"
+        aria-labelledby="changeContratoModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-contratos" role="document">
+          <div class="modal-content">
+            <div class="modal-body p-6">
+              <button type="button" class="modal-dismiss" data-dismiss="modal" aria-label="Fechar">
+                <img src="assets/img/icon_modal_dismiss.svg" alt="">
+              </button>
+              <form action="" class="gascan-forms" style="margin: auto;">
+                <h1 class="text-primary text-34 text-bold text-center m-0 mb-3">Bem-vindo João Costa</h1>
+
+                <p class="text-center mb-5">Por favor escolha o contrato que pretende consultar</p>
+
+                <div class="contratos">
+                  <a href="#" class="contrato active">
+                    <i class="notify">
+                      <div class="bullet"></div>
+                    </i>
+
+                    <span class="c-label text-12">Contrato Doméstico N.º</span>
+                    <span class="c-value">123456789</span>
+
+                    <span class="c-label text-12">Morada de Consumo</span>
+                    <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                  </a>
+                  <!-- /.contrato -->
+
+                  <a href="#" class="contrato">
+                    <i class="notify">
+                      <div class="bullet"></div>
+                    </i>
+
+                    <span class="c-label text-12">Contrato Doméstico N.º</span>
+                    <span class="c-value">123456789</span>
+
+                    <span class="c-label text-12">Morada de Consumo</span>
+                    <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                  </a>
+                  <!-- /.contrato -->
+
+                  <a href="#" class="contrato">
+                    <i class="notify"></i>
+
+                    <span class="c-label text-12">Contrato Doméstico N.º</span>
+                    <span class="c-value">123456789</span>
+
+                    <span class="c-label text-12">Morada de Consumo</span>
+                    <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                  </a>
+                  <!-- /.contrato -->
+
+                  <a href="#" class="contrato">
+                    <i class="notify">
+                      <div class="bullet"></div>
+                    </i>
+
+                    <span class="c-label text-12">Contrato Doméstico N.º</span>
+                    <span class="c-value">123456789</span>
+
+                    <span class="c-label text-12">Morada de Consumo</span>
+                    <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                  </a>
+                  <!-- /.contrato -->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: Change selected contact modal -->
+
+      <!-- Change logged user password modal -->
+      <div class="modal fade" id="changeMyPasswordModal" tabindex="-1" role="dialog"
+        aria-labelledby="changeMyPasswordModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body p-6">
+              <form action="" class="gascan-forms" style="max-width: 360px; margin: auto;">
+                <h1 class="text-primary text-34 text-bold text-center m-0 mb-5">Alterar Password</h1>
+
+                <div class="form-group">
+                  <label for="changePassword">Nova password</label>
+                  <input type="password" autocomplete="new-password" class="form-control" id="changePassword">
+                </div>
+
+                <div class="form-group">
+                  <label for="changeConfirmPassword">Confirmar password</label>
+                  <input type="password" autocomplete="new-password" class="form-control" id="changeConfirmPassword">
+                </div>
+
+                <div class="d-flex justify-content-between mt-5">
+                  <button type="reset" class="btn btn-outline-primary px-5" data-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-primary px-5">Alterar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: Change logged user password modal -->
 
       <div class="backoffice-content notificacoes">
         <div class="container">

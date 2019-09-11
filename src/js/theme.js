@@ -18,8 +18,8 @@
 
     // fix navigation height
     const fixNavigationHeight = debounce(function() {
-      const $nav = $(".backoffice-navigation");
-      const $window = $(window);
+      const $nav = $(".backoffice-navigation-container");
+      const $window = $("body");
 
       if ($nav.height() < $window.height()) {
         $nav.css("height", $window.height());
@@ -29,5 +29,19 @@
     fixNavigationHeight();
 
     $(window).on("resize", fixNavigationHeight);
+
+    // toggle main navigation when in mobile view
+    $(".main-nav-toggle").on("click", function(event) {
+      event.preventDefault();
+
+      const $navContainer = $(".backoffice-navigation-container");
+
+      if ($navContainer.hasClass("show")) {
+        $navContainer.removeClass("show");
+        return;
+      }
+
+      $navContainer.addClass("show");
+    });
   });
 })($);
