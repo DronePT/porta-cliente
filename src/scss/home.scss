@@ -1,8 +1,13 @@
 @import "./scss_vars/template_variables";
+@import "./bootstrap4/mixins/breakpoints";
 
 .home {
   .widgets-h-340 .widget {
     min-height: 340px;
+
+    @include media-breakpoint-down(md) {
+      min-height: auto;
+    }
   }
 
   .widgets-h-500 .widget {
@@ -25,14 +30,21 @@
       font-size: 1.222222222rem;
       line-height: 1.666666667rem;
       letter-spacing: 0.53px;
+
+      display: flex;
+      justify-content: space-between;
     }
 
     .w-subtitle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
       color: rgba($dark-gray, 0.5);
     }
 
     .widget-footer {
-      position: absolute;
+      // position: absolute;
 
       display: flex;
       justify-content: center;
@@ -42,6 +54,7 @@
       bottom: 1rem;
 
       padding-top: 0.5rem;
+      margin-top: 0.5rem;
 
       border-top: solid 1px $primary-color;
 
@@ -189,6 +202,29 @@
             &::after {
               border-color: $dark;
             }
+          }
+        }
+
+        @include media-breakpoint-down(md) {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          padding: 1rem;
+          background-color: $white;
+
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+
+          .text-orange {
+            font-size: 1rem !important;
+            line-height: 1.75rem !important;
+            font-weight: 700;
+          }
+
+          .text-white {
+            color: $primary-color !important;
+            font-size: 1.375rem !important;
+            line-height: 1.875rem !important;
           }
         }
       }

@@ -310,9 +310,17 @@
               <div class="row widgets-h-340">
                 <div class="col-lg-6">
                   <div class="widget">
-                    <div class="w-title">Histórico de Consumos</div>
-                    <div id="chart-consumos" class="chart" data-values="50,25,53,40,36,40"
-                      data-labels="Ago,Set,Out,Nov,Dez,Jan">
+                    <div class="w-title">
+                      <a href="#collapseHistorico" data-toggle="collapse" role="button" aria-expanded="true"
+                        aria-controls="collapseHistorico">
+                        <span>Histórico de Consumos</span>
+                        <img src="assets/img/icon_caret_down.svg" alt="" class="caret">
+                      </a>
+                    </div>
+                    <div id="collapseHistorico" class="collapse show">
+                      <div id="chart-consumos" class="chart" data-values="50,25,53,40,36,40"
+                        data-labels="Ago,Set,Out,Nov,Dez,Jan">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -320,26 +328,44 @@
 
                 <div class="col-lg-3">
                   <div class="widget">
-                    <div class="w-title">Última Leitura</div>
-                    <div class="w-subtitle">12/01/2019</div>
-                    <div class="chart-leitura-container">
-                      <div class="cl-hollow">
+                    <div class="w-title">
+                      <a href="#collapseUltima" data-toggle="collapse" role="button" aria-expanded="true"
+                        aria-controls="collapseUltima">
+                        <span>Última Leitura</span>
+                        <img src="assets/img/icon_caret_down.svg" alt="" class="caret">
+                      </a>
+                    </div>
+                    <!-- /.w-title -->
+
+                    <div class="w-subtitle pr-4 pr-lg-0">
+                      <span>12/01/2019</span>
+                      <span class="d-lg-none">
                         <div>
-                          3200<span>,56</span>
+                          3200,56 m<sup>3</sup>
                         </div>
-                        <span>m<sup>3</sup></span>
-                      </div>
-                      <div class="cl-bottom">
-                        <span class="label">Média de Consumos</span>
-                        <span class="value">47,49 m<sup>3</sup></span>
-                      </div>
-                      <div id="chart-leitura" class="chart" data-values="60"></div>
+                      </span>
                     </div>
 
-                    <div class="widget-footer">
-                      <a href="leituras.html" class="text-12">Ver leituras</a>
+                    <div id="collapseUltima" class="collapse show">
+                      <div class="chart-leitura-container">
+                        <div class="cl-hollow">
+                          <div>
+                            3200<span>,56</span>
+                          </div>
+                          <span>m<sup>3</sup></span>
+                        </div>
+                        <div class="cl-bottom">
+                          <span class="label">Média de Consumos</span>
+                          <span class="value">47,49 m<sup>3</sup></span>
+                        </div>
+                        <div id="chart-leitura" class="chart" data-values="60"></div>
+                      </div>
+
+                      <div class="widget-footer">
+                        <a href="leituras.html" class="text-12">Ver leituras</a>
+                      </div>
+                      <!-- /.widget-footer -->
                     </div>
-                    <!-- /.widget-footer -->
                   </div>
                   <!-- /.widget -->
 
@@ -348,45 +374,54 @@
 
                 <div class="col-lg-3">
                   <div class="widget widget-primary">
-                    <div class="w-title">Última Fatura</div>
+                    <div class="w-title">
+                      <a href="#collapseUltimaFatura" data-toggle="collapse" role="button" aria-expanded="true"
+                        aria-controls="collapseUltimaFatura">
+                        <span>Última Fatura</span>
+                        <img src="assets/img/icon_caret_down_white.svg" alt="" class="caret">
+                      </a>
+                    </div>
                     <div class="w-subtitle">12/01/2019</div>
 
-                    <div class="widget-fatura">
-                      <span class="alert-badge text-12 text-bold">Por Pagar</span>
-                      <div class="fatura-reference">
-                        <img src="assets/img/icon_mb.svg" alt="">
-                        <div class="ref">
-                          <div>Fatura 9087654321</div>
+                    <div id="collapseUltimaFatura" class="collapse show">
+                      <div class="widget-fatura">
+                        <span class="alert-badge text-12 text-bold mr-4 mr-lg-0">Por Pagar</span>
+                        <div class="fatura-reference">
+                          <img src="assets/img/icon_mb.svg" alt="">
+                          <div class="ref">
+                            <div>Fatura 9087654321</div>
 
-                          <span class="wf-label">Referência</span>
-                          <span class="wf-value">345 543 376</span>
+                            <span class="wf-label">Referência</span>
+                            <span class="wf-value">345 543 376</span>
+                          </div>
                         </div>
+                        <!-- /.fatura-reference -->
+
+                        <div class="fatura-payment">
+                          <div>
+                            <span class="wf-label">Pagar até</span>
+                            <span class="wf-value">12/01/2019</span>
+                          </div>
+                          <div>
+                            <span class="wf-label">Entidade</span>
+                            <span class="wf-value">10928</span>
+                          </div>
+                          <div>
+                            <span class="wf-label">Montante</span>
+                            <span class="wf-value">0000,00 &euro;</span>
+                          </div>
+                        </div>
+                        <!-- /.fatura-payment -->
+
                       </div>
-                      <!-- /.fatura-reference -->
+                      <!-- /.widget-fatura -->
 
-                      <div class="fatura-payment">
-                        <div>
-                          <span class="wf-label">Pagar até</span>
-                          <span class="wf-value">12/01/2019</span>
-                        </div>
-                        <div>
-                          <span class="wf-label">Entidade</span>
-                          <span class="wf-value">10928</span>
-                        </div>
-                        <div>
-                          <span class="wf-label">Montante</span>
-                          <span class="wf-value">0000,00 &euro;</span>
-                        </div>
+                      <div class="widget-footer">
+                        <a href="faturas.html" class="text-12">Ver faturas</a>
                       </div>
-                      <!-- /.fatura-payment -->
-
+                      <!-- /.widget-footer -->
                     </div>
-                    <!-- /.widget-fatura -->
-
-                    <div class="widget-footer">
-                      <a href="faturas.html" class="text-12">Ver faturas</a>
-                    </div>
-                    <!-- /.widget-footer -->
+                    <!-- /#collapseUltimaFatura -->
 
                   </div>
                 </div>

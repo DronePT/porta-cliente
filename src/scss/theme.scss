@@ -1539,3 +1539,23 @@ body {
     padding-left: 36px;
   }
 }
+
+a[data-toggle="collapse"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  color: inherit;
+  text-decoration: none;
+
+  .caret {
+    transition: transform 0.2s ease;
+    transform: rotate(180deg);
+  }
+
+  &.collapsed .caret {
+    transform: rotate(0deg);
+  }
+}
