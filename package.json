@@ -1,6 +1,6 @@
 {
   "name": "gascan-back-office",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Gascan Back-office theme",
   "main": "index.js",
   "scripts": {
