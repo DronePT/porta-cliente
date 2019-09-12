@@ -1547,6 +1547,41 @@ body {
   }
 }
 
+.flex-mobile,
+.block-mobile {
+  display: none;
+}
+
+.flex-desktop {
+  display: flex;
+}
+
+.block-desktop {
+  display: block;
+}
+
+.tablecell-desktop,
+.tcell-desktop {
+  display: table-cell;
+}
+
+@include media-breakpoint-down(md) {
+  .flex-mobile {
+    display: flex;
+  }
+
+  .block-mobile {
+    display: block;
+  }
+
+  .flex-desktop,
+  .block-desktop,
+  .tablecell-desktop,
+  .tcell-desktop {
+    display: none;
+  }
+}
+
 a[data-toggle="collapse"] {
   display: flex;
   align-items: center;

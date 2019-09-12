@@ -19,10 +19,13 @@
     // fix navigation height
     const fixNavigationHeight = debounce(function() {
       const $nav = $(".backoffice-navigation-container");
-      const $window = $("body");
+      const $window = $(window);
+      const $body = $("body");
 
-      if ($nav.height() < $window.height()) {
-        $nav.css("height", $window.height());
+      const newHeight = $window.height() > $body.height() ? $window.height() : $body.height();
+
+      if ($nav.height() < newHeight) {
+        $nav.css("height", newHeight);
       }
     }, 150);
 
