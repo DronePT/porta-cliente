@@ -311,11 +311,15 @@
                 <div class="col-lg-6">
                   <div class="paper h-370">
                     <div class="paper-header">
-                      <h2 class="text-22 text-bold">Histórico de Consumos</h2>
+                      <a href="#collapseHistorico" data-toggle="collapse" role="button" aria-expanded="true"
+                        aria-controls="collapseHistorico">
+                        <h2 class="text-22 text-bold">Histórico de Consumos</h2>
+                        <img src="assets/img/icon_caret_down.svg" alt="" class="caret">
+                      </a>
                     </div>
                     <!-- /.paper-header -->
 
-                    <div class="paper-content">
+                    <div id="collapseHistorico" class="paper-content collapse show">
                       <div id="chart-consumos" class="chart" data-values="50,25,53,40,36,40"
                         data-labels="Ago,Set,Out,Nov,Dez,Jan">
                       </div>
@@ -331,18 +335,22 @@
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="paper bg-primary h-370 d-flex flex-column justify-content-between">
-                        <div class="paper-content">
-                          <p class="text-primary-dark m-0 text-center">Periodo de Faturação</p>
-                          <h3 class="text-22 text-white text-bold text-center m-2">Normal</h3>
-
-                          <div class="text-center mt-5">
+                        <div class="paper-content d-flex flex-row flex-lg-column-reverse">
+                          <div class="text-center mt-lg-5 mr-4 mr-lg-0 paper-icons-container">
                             <img src="assets/img/icon_faturas_pie.svg" alt="">
                           </div>
 
+                          <div class="d-flex flex-grow-1 flex-column align-items-start align-items-lg-center">
+                            <a href="faturas_periodo.html" class="text-primary-dark leitura-widget-title">
+                              <span>Periodo de Faturação</span>
+                              <img src="assets/img/icon_caret_down_white.svg" alt="">
+                            </a>
+                            <h3 class="text-22 text-white text-bold text-center">Normal</h3>
+                          </div>
                         </div>
                         <!-- /.paper-content -->
 
-                        <div class="paper-footer">
+                        <div class="paper-footer block-desktop">
                           <div class="divider-primary-dark"></div>
                           <a href="faturas_periodo.html" class="text-12 text-white d-block text-center pt-3">Alterar</a>
                         </div>
@@ -354,18 +362,24 @@
 
                     <div class="col-lg-6">
                       <div class="paper bg-primary-dark h-370 d-flex flex-column justify-content-between">
-                        <div class="paper-content">
-                          <p class="text-primary m-0 text-center">Fatura Eletrónica</p>
-                          <h3 class="text-22 text-white text-bold text-center m-2">Activa</h3>
-
-                          <div class="text-center mt-5">
+                        <div class="paper-content d-flex flex-row flex-lg-column-reverse">
+                          <div class="text-center mt-lg-5 mr-4 mr-lg-0 paper-icons-container">
                             <img src="assets/img/icon_faturas_pdf.svg" alt="">
                           </div>
+                          <!-- /.paper-icons-container -->
 
+                          <div class="d-flex flex-grow-1 flex-column align-items-start align-items-lg-center">
+                            <a href="faturas_eletronica.html" class="text-primary leitura-widget-title">
+                              <span>Periodo de Faturação</span>
+                              <img src="assets/img/icon_caret_down_white.svg" alt="">
+                            </a>
+
+                            <h3 class="text-22 text-white text-bold text-center">Activa</h3>
+                          </div>
                         </div>
                         <!-- /.paper-content -->
 
-                        <div class="paper-footer">
+                        <div class="paper-footer block-desktop">
                           <div class="divider-primary"></div>
                           <a href="faturas_eletronica.html"
                             class="text-12 text-white d-block text-center pt-3">Alterar</a>
@@ -408,7 +422,7 @@
                   <div class="gc-table mt-3 columns-dark columns-bold table-faturas">
                     <table border="0">
                       <thead>
-                        <tr>
+                        <tr class="tablerow-desktop">
                           <th style="min-width: 75px;"></th>
                           <th width="25%" style="min-width: 90px;">Fatura Nº</th>
                           <th width="25%" style="min-width: 120px">Data da Fatura</th>
@@ -424,9 +438,17 @@
                           <td>
                             <i class="icon-fatura"></i>
                           </td>
-                          <td>9087654321</td>
-                          <td>09/02/2019</td>
                           <td>
+                            9087654321
+                            <div class="block-mobile">
+                              09/02/2019
+                            </div>
+                          </td>
+                          <td class="tablecell-mobile">
+                            <img src="assets/img/badge_warn.svg" alt="">
+                          </td>
+                          <td class="tablecell-desktop">09/02/2019</td>
+                          <td class="tablecell-desktop">
                             <span class="badge badge-pill w-100 badge-warning">Por pagar</span>
                           </td>
                           <td>22,85 &euro;</td>
@@ -441,9 +463,17 @@
                           <td>
                             <i class="icon-fatura"></i>
                           </td>
-                          <td>9087654321</td>
-                          <td>09/02/2019</td>
                           <td>
+                            9087654321
+                            <div class="block-mobile">
+                              09/02/2019
+                            </div>
+                          </td>
+                          <td class="tablecell-mobile">
+                            <img src="assets/img/badge_success.svg" alt="">
+                          </td>
+                          <td class="tablecell-desktop">09/02/2019</td>
+                          <td class="tablecell-desktop">
                             <span class="badge badge-pill w-100 badge-success">Pago</span>
                           </td>
                           <td>22,85 &euro;</td>
@@ -458,10 +488,18 @@
                           <td>
                             <i class="icon-fatura"></i>
                           </td>
-                          <td>9087654321</td>
-                          <td>09/02/2019</td>
                           <td>
-                            <span class="badge badge-pill w-100 badge-danger">Não pago</span>
+                            9087654321
+                            <div class="block-mobile">
+                              09/02/2019
+                            </div>
+                          </td>
+                          <td class="tablecell-mobile">
+                            <img src="assets/img/badge_success.svg" alt="">
+                          </td>
+                          <td class="tablecell-desktop">09/02/2019</td>
+                          <td class="tablecell-desktop">
+                            <span class="badge badge-pill w-100 badge-success">Pago</span>
                           </td>
                           <td>22,85 &euro;</td>
                           <td align="right">
@@ -475,9 +513,41 @@
                           <td>
                             <i class="icon-fatura"></i>
                           </td>
-                          <td>9087654321</td>
-                          <td>09/02/2019</td>
                           <td>
+                            9087654321
+                            <div class="block-mobile">
+                              09/02/2019
+                            </div>
+                          </td>
+                          <td class="tablecell-mobile">
+                            <img src="assets/img/badge_fail.svg" alt="">
+                          </td>
+                          <td class="tablecell-desktop">09/02/2019</td>
+                          <td class="tablecell-desktop">
+                            <span class="badge badge-pill w-100 badge-danger">Não Pago</span>
+                          </td>
+                          <td>22,85 &euro;</td>
+                          <td align="right">
+                            <div>
+                              <img src="assets/img/icon_circle_right.svg" alt="Ver">
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <i class="icon-fatura"></i>
+                          </td>
+                          <td>
+                            9087654321
+                            <div class="block-mobile">
+                              09/02/2019
+                            </div>
+                          </td>
+                          <td class="tablecell-mobile">
+                            <img src="assets/img/badge_success.svg" alt="">
+                          </td>
+                          <td class="tablecell-desktop">09/02/2019</td>
+                          <td class="tablecell-desktop">
                             <span class="badge badge-pill w-100 badge-success">Pago</span>
                           </td>
                           <td>22,85 &euro;</td>

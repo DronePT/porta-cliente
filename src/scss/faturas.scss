@@ -1,4 +1,5 @@
 @import "./scss_vars/template_variables";
+@import "./bootstrap4/mixins/breakpoints";
 
 .faturas {
   .gc-table {
@@ -12,6 +13,34 @@
 
         .icon-fatura {
           margin-top: 6px;
+        }
+
+        @include media-breakpoint-down(md) {
+          box-sizing: content-box;
+          padding: 0;
+          padding: 0 0.444444449rem;
+
+          &:nth-child(1) {
+            min-width: 17px;
+            padding-right: 0;
+          }
+
+          &:nth-child(2) {
+            width: 100%;
+          }
+
+          &:nth-child(3) {
+            min-width: 30px;
+            padding-left: 0;
+          }
+
+          &:nth-child(6) {
+            min-width: 75px;
+          }
+
+          &:nth-child(7) {
+            min-width: 30px;
+          }
         }
       }
 
@@ -42,6 +71,42 @@
     }
   }
 
+  .paper-icons-container {
+    img {
+      width: 100px;
+
+      @include media-breakpoint-down(md) {
+        width: 50px;
+      }
+    }
+  }
+
+  .leitura-widget-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+
+    > img {
+      position: absolute;
+      right: 0;
+      display: none;
+      transform: rotate(-90deg);
+    }
+
+    @include media-breakpoint-down(md) {
+      justify-content: start;
+
+      > img {
+        display: block;
+      }
+    }
+  }
+
   .icon-fatura {
     display: inline-block;
     width: 17px;
@@ -56,6 +121,10 @@
 
   .h-370 {
     height: 370px;
+
+    @include media-breakpoint-down(md) {
+      height: auto;
+    }
   }
 
   .form-leitura {

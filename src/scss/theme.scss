@@ -1564,9 +1564,19 @@ body {
   display: block;
 }
 
+.tablecell-mobile,
+.tcell-mobile {
+  display: none;
+}
+
 .tablecell-desktop,
 .tcell-desktop {
   display: table-cell;
+}
+
+.tablerow-desktop,
+.trow-desktop {
+  display: table-row;
 }
 
 @include media-breakpoint-down(md) {
@@ -1578,10 +1588,17 @@ body {
     display: block;
   }
 
+  .tablecell-mobile,
+  .tcell-mobile {
+    display: table-cell;
+  }
+
   .flex-desktop,
   .block-desktop,
   .tablecell-desktop,
-  .tcell-desktop {
+  .tcell-desktop,
+  .tablerow-desktop,
+  .trow-desktop {
     display: none;
   }
 }
