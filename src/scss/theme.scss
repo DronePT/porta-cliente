@@ -532,6 +532,10 @@ main.backoffice {
   > * {
     margin-left: 12px;
   }
+
+  @include media-breakpoint-down(md) {
+    justify-content: center;
+  }
 }
 
 .page-header {

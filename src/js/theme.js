@@ -1,3 +1,5 @@
+const mobileBreakdown = 1024;
+
 (function($) {
   const debounce = (func, delay) => {
     let inDebounce;

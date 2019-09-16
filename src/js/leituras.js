@@ -10,6 +10,10 @@
   };
 
   $(window).ready(() => {
+    if ($(window).width() <= mobileBreakdown) {
+      $("#collapseHistorico").collapse("hide");
+    }
+
     /**
      * Build Charts
      */
