@@ -1,5 +1,7 @@
 "use strict";
 
+var mobileBreakdown = 1024;
+
 (function ($) {
   var debounce = function debounce(func, delay) {
     var inDebounce;

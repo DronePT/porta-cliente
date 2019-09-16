@@ -14,9 +14,14 @@
   };
 
   $(window).ready(function () {
+    if ($(window).width() <= mobileBreakdown) {
+      $("#collapseHistorico").collapse("hide");
+    }
     /**
      * Build Charts
      */
+
+
     var $chart = $("#chart-consumos");
     var seriesData = String($chart.data("values") || "").split(",").map(function (v) {
       return parseFloat(v);
