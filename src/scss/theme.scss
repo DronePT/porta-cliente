@@ -428,6 +428,10 @@ main.backoffice {
     color: rgba($white, 0.7);
 
     padding: 0 2rem;
+
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+    }
   }
 }
 

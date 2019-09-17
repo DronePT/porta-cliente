@@ -297,52 +297,78 @@
       <!-- End: Change logged user password modal -->
 
       <div class="backoffice-content faturas">
+
+        <!-- Fatura eletronica modal -->
+        <div class="modal fade" id="faturaEletronicaModal" tabindex="-1" role="dialog"
+          aria-labelledby="faturaEletronicaModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <form action="" class="gascan-forms">
+                  <h1 class="text-primary text-34 text-bold text-center m-0 mb-4">Fatura Eletrónica Inativa</h1>
+
+                  <p class="text-center">Para consultar a factura deverá ativar a fatura eletrónica.</p>
+                  <p class="text-center">Deseja activar a factura eletrónica?</p>
+
+                  <div class="d-flex justify-content-between justify-content-lg-center mt-5 faturaEletronicaActions">
+                    <button type="reset" class="btn btn-outline-primary px-5" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary px-5 ml-lg-4">Ativar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End: Fatura eletronica modal -->
+
         <div class="container">
           <div class="row">
             <div class="col">
               <div class="page-header">
-                <h1 class="text-primary text-34 text-bold my-5">
+                <h1 class="text-primary text-34 text-bold my-3 my-lg-5">
                   <div class="ph-breadcrumb">As suas faturas / Fatura Eletrónica</div>
                   Fatura Eletrónica
                 </h1>
               </div>
               <!-- /.page-header -->
 
-              <div class="paper bg-primary-dark text-white" style="padding: 2rem;">
+              <div class="paper bg-primary-dark text-white" style="padding: 1.5rem;">
                 <div class="row align-items-center h-100">
-                  <div class="col-lg-3 h-100">
+                  <div class="col-lg-3 h-100 block-desktop">
                     <div class="d-flex align-items-center justify-content-center h-100 mb-4 mb-lg-0">
                       <img src="assets/img/icon_faturas_pdf.svg" alt="">
                     </div>
                   </div>
                   <div class="col-lg-9">
-                    <h2 class="text-22 text-primary text-bold m-0 p-0">Fatura Eletrónica</h2>
-                    <h3 class="text-34 text-white text-bold m-0 p-0">Activa</h3>
-
-                    <div class="row">
-                      <div class="col-lg-10">
-                        <form class="form-inline mt-4 form-fatura-eletronica gascan-forms">
-                          <div class="row flex-grow-1">
-                            <div class="col-lg-9">
-                              <div class=" form-group form-group-rounded">
-                                <label for="inputEmail">E-mail</label>
-                                <input type="text" class="form-control mb-2 mr-sm-2" id="inputEmail">
-                              </div>
-                            </div>
-
-                            <div class="col-lg-3 text-center text-lg-left">
-                              <button type="submit"
-                                class="btn btn-outline-light px-4 text-white text-bold mt-2 mt-lg-0">Alterar</button>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="col-lg-2">
-                        <div class="text-center text-lg-right mt-4">
-                          <a href="#" class="btn btn-primary px-4">Desativar</a>
-                        </div>
+                    <div class="d-flex align-items-end mb-5 mb-lg-4">
+                      <img src="assets/img/icon_faturas_pdf.svg" alt="" width="100" class="block-mobile mr-4">
+                      <div class="flex-grow-1">
+                        <h2 class="text-22 text-primary text-bold m-0 p-0">Fatura Eletrónica</h2>
+                        <h3 class="text-34 text-white text-bold m-0 p-0">Activa</h3>
                       </div>
                     </div>
+
+                    <form class="form-inline form-fatura-eletronica gascan-forms">
+                      <div class="row flex-grow-1">
+                        <div class="col-12 col-lg-7 mb-3 mb-lg-0">
+                          <div class=" form-group form-group-rounded">
+                            <label for="inputEmail">E-mail</label>
+                            <input type="text" class="form-control mb-2 mr-sm-2" id="inputEmail">
+                          </div>
+                        </div>
+                        <!-- /.col-lg-7 -->
+
+                        <div class="col-6 col-lg-2 text-left">
+                          <button type="submit" class="btn btn-outline-light px-4 text-white text-bold">Alterar</button>
+                        </div>
+                        <!-- /.col-lg-3 -->
+
+                        <div class="col-6 col-lg-3 text-right">
+                          <a href="#" class="btn btn-primary px-4">Desativar</a>
+                        </div>
+                        <!-- /.col-lg-3 -->
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -352,7 +378,9 @@
 
               <div class="row">
                 <div class="offset-lg-3 col-lg-9">
-                  <p>A pensar na melhoria da qualidade de serviço que prestamos, vimos por este meio informá‐lo que
+                  <p class="mt-4 mt-lg-0">A pensar na melhoria da qualidade de serviço que prestamos, vimos por este
+                    meio
+                    informá‐lo que
                     temos disponível um novo
                     serviço, a fatura eletrónica.</p>
 
@@ -399,6 +427,12 @@
 
   <script src="assets/js/theme.min.js"></script>
   <script src="assets/js/faturas.js"></script>
+
+  <script>
+    $(window).ready(function () {
+      $('#faturaEletronicaModal').modal('show')
+    });
+  </script>
 </body>
 
 </html>
