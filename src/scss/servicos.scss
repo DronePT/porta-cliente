@@ -75,6 +75,8 @@
 
       height: 292px;
 
+      padding: 0;
+
       .widget-news-footer {
         display: flex;
         flex-flow: row nowrap;
@@ -83,6 +85,12 @@
         align-items: flex-end;
 
         width: 100%;
+        padding: 1rem;
+
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+
+        color: $white;
 
         .details {
           display: flex;
@@ -118,24 +126,66 @@
             }
           }
         }
+
+        .title,
+        h2 {
+          font-size: 34px;
+          line-height: 40px;
+          font-weight: bold;
+        }
+
+        @include media-breakpoint-down(md) {
+          &:not(.service) {
+            background-color: $white;
+            color: $primary-color;
+          }
+
+          .title,
+          h2 {
+            font-size: 22px;
+            line-height: 30px;
+          }
+
+          .btn-contactar {
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translate(-50%, 100%);
+          }
+        }
       }
 
       &.service-1 {
         background-image: url(../img/servicos_bg_1.svg), linear-gradient(to bottom, $primary-color, $dark-blue);
         background-size: auto 200px, cover;
         background-position: -40px center, center;
+
+        @include media-breakpoint-down(md) {
+          background-position: -835px 16px, center;
+          margin-bottom: 5rem;
+        }
       }
 
       &.service-2 {
         background-image: url(../img/servicos_bg_2.svg), linear-gradient(to bottom, $primary-color, $dark-blue);
         background-size: auto 275px, cover;
         background-position: -80px 40px, center;
+
+        @include media-breakpoint-down(md) {
+          background-position: -865px 15px, center;
+          margin-bottom: 5rem;
+        }
       }
 
       &.service-3 {
         background-image: url(../img/servicos_bg_3.svg), linear-gradient(to bottom, $primary-color, $dark-blue);
         background-size: auto 230px, cover;
         background-position: -170px 10px, center;
+
+        @include media-breakpoint-down(md) {
+          background-position: -955px -10px, center;
+          margin-bottom: 5rem;
+        }
       }
     }
   }
