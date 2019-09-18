@@ -604,6 +604,14 @@ main.backoffice {
   overflow: hidden;
 }
 
+@include media-breakpoint-up(lg) {
+  .text-lg-34 {
+    font-size: 1.8888888889rem;
+    line-height: 2.4444444444rem;
+    letter-spacing: 0;
+  }
+}
+
 /** Buttons Styling */
 .btn {
   display: inline-flex;

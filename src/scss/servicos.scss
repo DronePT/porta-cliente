@@ -75,6 +75,12 @@
 
       height: 292px;
 
+      &.max-h-150 {
+        @include media-breakpoint-down(lg) {
+          max-height: 150px;
+        }
+      }
+
       padding: 0;
 
       .widget-news-footer {
