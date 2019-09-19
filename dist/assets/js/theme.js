@@ -44,6 +44,18 @@ var mobileBreakdown = 1024;
       }
 
       $navContainer.addClass("show");
+    }); // toggle user navigation menu
+
+    $(".user-nav-toggle").on("click", function (event) {
+      event.preventDefault();
+      var $menuContainer = $(".mobile-user-menu--container");
+
+      if ($menuContainer.hasClass("show")) {
+        $menuContainer.removeClass("show");
+        return;
+      }
+
+      $menuContainer.addClass("show");
     });
   });
 })($);

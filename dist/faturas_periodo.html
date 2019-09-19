@@ -159,6 +159,60 @@
       </header>
 
       <header class="backoffice-header backoffice-header-mobile d-block d-lg-none">
+        <div class="mobile-user-menu--container">
+          <div class="mobile-user-menu bg-primary">
+            <ul class="nav-mobile d-flex align-items-center justify-content-between">
+              <li>
+                <a href="#" class="user-nav-toggle">
+                  <img src="assets/img/icon_close.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <img src="assets/img/logo_white.svg" alt="" height="30">
+              </li>
+              <li>
+                <div class="dropdown">
+                  <div class="user">
+                    <div class="avatar-container d-flex align-items-center">
+                      <div class="avatar avatar-no-bg">
+                        <img src="assets/img/user_avatar.svg" alt="User Avatar">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="bg-primary text-white p-3">
+              <div class="data-container d-flex flex-column align-items-start mt-4 mt-lg-0">
+                <span class="role">Olá de novo,</span>
+                <span class="name text-34 text-bold">João Costa</span>
+              </div>
+
+              <nav class="header-navigation my-4 my-lg-0">
+                <ul>
+                  <li>
+                    <a href="#contratos" data-toggle="modal" data-target="#changeContratoModal">
+                      <div class="icon">
+                        <i class="contratos"></i>
+                      </div>
+                      <span>Contratos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="dadospessoais.html">
+                      <div class="icon">
+                        <i class="dados"></i>
+                      </div>
+                      <span>Dados Pessoais</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- /.header-navigation -->
+            </div>
+          </div>
+        </div>
         <ul class="nav-mobile d-flex align-items-center justify-content-between">
           <li>
             <a href="#" class="main-nav-toggle">
@@ -170,25 +224,13 @@
           </li>
           <li>
             <div class="dropdown show">
-              <a href="#" class="user dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+              <a class="user user-nav-toggle" href="#user-menu">
                 <div class="avatar-container d-flex align-items-center">
                   <div class="avatar">
                     <img src="assets/img/user_avatar.svg" alt="User Avatar">
                   </div>
                 </div>
               </a>
-
-              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <li class="dropdown-item">
-                  <a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
-                    data-target="#changeMyPasswordModal">Alterar
-                    Password</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="#" class="btn btn-sm btn-outline-primary">Terminar Sessão</a>
-                </li>
-              </ul>
             </div>
           </li>
         </ul>
