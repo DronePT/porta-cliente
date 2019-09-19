@@ -15,84 +15,93 @@
 
 <body>
   <main class="backoffice backoffice-logged">
-    <nav class="backoffice-navigation">
-      <a href="/" class="logo">
-        <img src="assets/img/logo_white.svg" alt="Gascan Logo">
-      </a>
+    <div class="backoffice-navigation-container">
+      <nav class="backoffice-navigation">
+        <a href="/" class="logo d-none d-lg-flex">
+          <img src="assets/img/logo_white.svg" alt="Gascan Logo">
+        </a>
 
-      <ul class="menu">
-        <li>
-          <a href="/home.html">
-            <div class="icon">
-              <img src="assets/img/icon_menu_home.svg" alt="">
-            </div>
-            <span>Home</span>
+        <div class="backoffice-navigation-header d-flex d-lg-none justify-content-between p-3 pb-5">
+          <a href="#close" class="main-nav-toggle">
+            <img src="assets/img/icon_close.svg" alt="">
           </a>
-        </li>
+          <img src="assets/img/logo_white.svg" height="30" alt="">
+        </div>
 
-        <li>
-          <a href="notificacoes.html">
-            <div class="icon">
-              <img src="assets/img/icon_menu_notificacoes.svg" alt="">
-              <div class="bullet"></div>
+        <ul class="menu">
+          <li>
+            <a href="/home.html" class="active">
+              <div class="icon">
+                <img src="assets/img/icon_menu_home.svg" alt="">
+              </div>
+              <span>Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="notificacoes.html">
+              <div class="icon">
+                <img src="assets/img/icon_menu_notificacoes.svg" alt="">
+                <div class="bullet"></div>
+              </div>
+              <span>Notificações</span>
+              <div class="counter-badge">88</div>
+            </a>
+          </li>
+
+          <li>
+            <a href="leituras.html">
+              <div class="icon">
+                <img src="assets/img/icon_menu_leituras.svg" alt="">
+              </div>
+              <span>Leituras</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="faturas.html">
+              <div class="icon">
+                <img src="assets/img/icon_menu_faturas.svg" alt="">
+              </div>
+              <span>Faturas</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="servicos.html">
+              <div class="icon">
+                <img src="assets/img/icon_menu_servicos.svg" alt="">
+              </div>
+              <span>Serviços & Campanhas</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav-contacts">
+          <li>
+            <div class="contact">
+              <img src="assets/img/icon_nav_phone.svg" alt="">
+              <div class="label text-16 py-1">Piquete de Emergência e Assistência Técnica 24h</div>
+              <div class="number text-22 text-bold">218 425 300</div>
             </div>
-            <span>Notificações</span>
-            <div class="counter-badge">88</div>
-          </a>
-        </li>
-
-        <li>
-          <a href="leituras.html">
-            <div class="icon">
-              <img src="assets/img/icon_menu_leituras.svg" alt="">
+          </li>
+          <li>
+            <div class="contact">
+              <img src="assets/img/icon_nav_wrench.svg" alt="">
+              <div class="label text-16 py-1">Apoio ao Cliente Dias úteis das 9h ás 19h</div>
+              <div class="number text-22 text-bold">218 425 300</div>
             </div>
-            <span>Leituras</span>
-          </a>
-        </li>
+          </li>
+        </ul>
 
-        <li>
-          <a href="faturas.html">
-            <div class="icon">
-              <img src="assets/img/icon_menu_faturas.svg" alt="">
-            </div>
-            <span>Faturas</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="servicos.html">
-            <div class="icon">
-              <img src="assets/img/icon_menu_servicos.svg" alt="">
-            </div>
-            <span>Serviços & Campanhas</span>
-          </a>
-        </li>
-      </ul>
-
-      <ul class="nav-contacts">
-        <li>
-          <div class="contact">
-            <img src="assets/img/icon_nav_phone.svg" alt="">
-            <div class="label text-16 py-1">Piquete de Emergência e Assistência Técnica 24h</div>
-            <div class="number text-22 text-bold">218 425 300</div>
-          </div>
-        </li>
-        <li>
-          <div class="contact">
-            <img src="assets/img/icon_nav_wrench.svg" alt="">
-            <div class="label text-16 py-1">Apoio ao Cliente Dias úteis das 9h ás 19h</div>
-            <div class="number text-22 text-bold">218 425 300</div>
-          </div>
-        </li>
-      </ul>
-
-      <div class="text-center pb-5">
-        <button class="btn btn-sm btn-outline-light">Terminar Sessão</button>
-      </div>
-    </nav>
+        <div class="text-center pb-5">
+          <button class="btn btn-sm btn-outline-light">Terminar Sessão</button>
+        </div>
+      </nav>
+    </div>
 
     <div class="backoffice-container dados-pessoais">
-      <header class="backoffice-header">
+      <header class="backoffice-header d-none d-lg-block">
         <div class="container">
           <div class="row">
             <div class="col d-flex align-items-center justify-content-end">
@@ -107,7 +116,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="dadospessoais.html" class="active">
+                    <a href="dadospessoais.html">
                       <div class="icon">
                         <i class="dados"></i>
                       </div>
@@ -134,7 +143,7 @@
                   </div>
                 </a>
 
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                   <li class="dropdown-item">
                     <a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
                       data-target="#changeMyPasswordModal">Alterar Password</a>
@@ -147,114 +156,150 @@
             </div>
           </div>
         </div>
-
-        <!-- Change selected contact modal -->
-        <div class="modal fade " id="changeContratoModal" tabindex="-1" role="dialog"
-          aria-labelledby="changeContratoModalTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-contratos" role="document">
-            <div class="modal-content">
-              <div class="modal-body p-6">
-                <button type="button" class="modal-dismiss" data-dismiss="modal" aria-label="Fechar">
-                  <img src="assets/img/icon_modal_dismiss.svg" alt="">
-                </button>
-                <form action="" class="gascan-forms" style="margin: auto;">
-                  <h1 class="text-primary text-34 text-bold text-center m-0 mb-3">Bem-vindo João Costa</h1>
-
-                  <p class="text-center mb-5">Por favor escolha o contrato que pretende consultar</p>
-
-                  <div class="contratos">
-                    <a href="#" class="contrato active">
-                      <i class="notify">
-                        <div class="bullet"></div>
-                      </i>
-
-                      <span class="c-label text-12">Contrato Doméstico N.º</span>
-                      <span class="c-value">123456789</span>
-
-                      <span class="c-label text-12">Morada de Consumo</span>
-                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
-                    </a>
-                    <!-- /.contrato -->
-
-                    <a href="#" class="contrato">
-                      <i class="notify">
-                        <div class="bullet"></div>
-                      </i>
-
-                      <span class="c-label text-12">Contrato Doméstico N.º</span>
-                      <span class="c-value">123456789</span>
-
-                      <span class="c-label text-12">Morada de Consumo</span>
-                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
-                    </a>
-                    <!-- /.contrato -->
-
-                    <a href="#" class="contrato">
-                      <i class="notify"></i>
-
-                      <span class="c-label text-12">Contrato Doméstico N.º</span>
-                      <span class="c-value">123456789</span>
-
-                      <span class="c-label text-12">Morada de Consumo</span>
-                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
-                    </a>
-                    <!-- /.contrato -->
-
-                    <a href="#" class="contrato">
-                      <i class="notify">
-                        <div class="bullet"></div>
-                      </i>
-
-                      <span class="c-label text-12">Contrato Doméstico N.º</span>
-                      <span class="c-value">123456789</span>
-
-                      <span class="c-label text-12">Morada de Consumo</span>
-                      <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
-                    </a>
-                    <!-- /.contrato -->
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End: Change selected contact modal -->
-
-        <!-- Change logged user password modal -->
-        <div class="modal fade" id="changeMyPasswordModal" tabindex="-1" role="dialog"
-          aria-labelledby="changeMyPasswordModalTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-body p-6">
-                <form action="" class="gascan-forms" style="max-width: 360px; margin: auto;">
-                  <h1 class="text-primary text-34 text-bold text-center m-0 mb-5">Alterar Password</h1>
-
-                  <div class="form-group">
-                    <label for="changePassword">Nova password</label>
-                    <input type="password" autocomplete="new-password" class="form-control" id="changePassword">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="changeConfirmPassword">Confirmar password</label>
-                    <input type="password" autocomplete="new-password" class="form-control" id="changeConfirmPassword">
-                  </div>
-
-                  <div class="d-flex justify-content-between mt-5">
-                    <button type="reset" class="btn btn-outline-primary px-5" data-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary px-5">Alterar</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End: Change logged user password modal -->
       </header>
+
+      <header class="backoffice-header backoffice-header-mobile d-block d-lg-none">
+        <ul class="nav-mobile d-flex align-items-center justify-content-between">
+          <li>
+            <a href="#" class="main-nav-toggle">
+              <img src="assets/img/icon_burger.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <img src="assets/img/logo_white_blue.svg" alt="" height="30">
+          </li>
+          <li>
+            <div class="dropdown show">
+              <a href="#" class="user dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <div class="avatar-container d-flex align-items-center">
+                  <div class="avatar">
+                    <img src="assets/img/user_avatar.svg" alt="User Avatar">
+                  </div>
+                </div>
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                <li class="dropdown-item">
+                  <a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                    data-target="#changeMyPasswordModal">Alterar
+                    Password</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#" class="btn btn-sm btn-outline-primary">Terminar Sessão</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </header>
+
+      <!-- Change selected contact modal -->
+      <div class="modal fade " id="changeContratoModal" tabindex="-1" role="dialog"
+        aria-labelledby="changeContratoModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-contratos" role="document">
+          <div class="modal-content">
+            <div class="modal-body p-6">
+              <button type="button" class="modal-dismiss" data-dismiss="modal" aria-label="Fechar">
+                <img src="assets/img/icon_modal_dismiss.svg" alt="">
+              </button>
+              <form action="" class="gascan-forms" style="margin: auto;">
+                <h1 class="text-primary text-34 text-bold text-center m-0 mb-3">Bem-vindo João Costa</h1>
+
+                <p class="text-center mb-5">Por favor escolha o contrato que pretende consultar</p>
+
+                <div class="contratos">
+                  <a href="#" class="contrato active">
+                    <i class="notify">
+                      <div class="bullet"></div>
+                    </i>
+
+                    <span class="c-label text-12">Contrato Doméstico N.º</span>
+                    <span class="c-value">123456789</span>
+
+                    <span class="c-label text-12">Morada de Consumo</span>
+                    <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                  </a>
+                  <!-- /.contrato -->
+
+                  <a href="#" class="contrato">
+                    <i class="notify">
+                      <div class="bullet"></div>
+                    </i>
+
+                    <span class="c-label text-12">Contrato Doméstico N.º</span>
+                    <span class="c-value">123456789</span>
+
+                    <span class="c-label text-12">Morada de Consumo</span>
+                    <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                  </a>
+                  <!-- /.contrato -->
+
+                  <a href="#" class="contrato">
+                    <i class="notify"></i>
+
+                    <span class="c-label text-12">Contrato Doméstico N.º</span>
+                    <span class="c-value">123456789</span>
+
+                    <span class="c-label text-12">Morada de Consumo</span>
+                    <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                  </a>
+                  <!-- /.contrato -->
+
+                  <a href="#" class="contrato">
+                    <i class="notify">
+                      <div class="bullet"></div>
+                    </i>
+
+                    <span class="c-label text-12">Contrato Doméstico N.º</span>
+                    <span class="c-value">123456789</span>
+
+                    <span class="c-label text-12">Morada de Consumo</span>
+                    <span class="c-value">Rua Cidade de Lisboa, 17, 7º Dto, Lisboa</span>
+                  </a>
+                  <!-- /.contrato -->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: Change selected contact modal -->
+
+      <!-- Change logged user password modal -->
+      <div class="modal fade" id="changeMyPasswordModal" tabindex="-1" role="dialog"
+        aria-labelledby="changeMyPasswordModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body p-6">
+              <form action="" class="gascan-forms" style="max-width: 360px; margin: auto;">
+                <h1 class="text-primary text-34 text-bold text-center m-0 mb-5">Alterar Password</h1>
+
+                <div class="form-group">
+                  <label for="changePassword">Nova password</label>
+                  <input type="password" autocomplete="new-password" class="form-control" id="changePassword">
+                </div>
+
+                <div class="form-group">
+                  <label for="changeConfirmPassword">Confirmar password</label>
+                  <input type="password" autocomplete="new-password" class="form-control" id="changeConfirmPassword">
+                </div>
+
+                <div class="d-flex justify-content-between mt-5">
+                  <button type="reset" class="btn btn-outline-primary px-5" data-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-primary px-5">Alterar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: Change logged user password modal -->
 
       <div class="backoffice-content">
         <div class="container">
           <div class="page-header">
-            <h1 class="text-primary text-34 text-bold my-5">
+            <h1 class="text-primary text-34 text-bold my-3 my-lg-5">
               Dados Pessoais
             </h1>
           </div>
@@ -266,7 +311,7 @@
                 <h2 class="text-22 text-bold mb-4">Dados do Contrato</h2>
 
                 <div class="row">
-                  <div class="col-lg-4">
+                  <div class="col-6 col-lg-4">
                     <div class="d-flex flex-column mt-3 mt-lg-0">
                       <span class="text-primary text-12">N.º de Instalação</span>
                       <span>123456789</span>
@@ -274,7 +319,7 @@
                   </div>
                   <!-- /.col-lg-4 -->
 
-                  <div class="col-lg-4">
+                  <div class="col-6 col-lg-4">
                     <div class="d-flex flex-column mt-3 mt-lg-0">
                       <span class="text-primary text-12">Contador</span>
                       <span>123456789</span>
@@ -282,7 +327,7 @@
                   </div>
                   <!-- /.col-lg-4 -->
 
-                  <div class="col-lg-4">
+                  <div class="col-6 col-lg-4">
                     <div class="d-flex flex-column mt-3 mt-lg-0">
                       <span class="text-primary text-12">N.º de Contrato</span>
                       <span>123456789</span>
@@ -290,12 +335,8 @@
                   </div>
                   <!-- /.col-lg-4 -->
 
-                </div>
-                <!-- /.row -->
-
-                <div class="row mt-lg-5">
-                  <div class="col-lg-4">
-                    <div class="d-flex flex-column mt-3 mt-lg-0">
+                  <div class="col-6 col-lg-4">
+                    <div class="d-flex flex-column mt-3 mt-lg-5">
                       <span class="text-primary text-12">Fatura Eletrónica</span>
                       <span>Ativa</span>
                     </div>
@@ -303,7 +344,7 @@
                   <!-- /.col-lg-4 -->
 
                   <div class="col-lg-4">
-                    <div class="d-flex flex-column mt-3 mt-lg-0">
+                    <div class="d-flex flex-column mt-3 mt-lg-5">
                       <span class="text-primary text-12">E-mail da Fatura Eletrónica</span>
                       <span>joaosilva@gmail.com</span>
                     </div>
@@ -311,7 +352,7 @@
                   <!-- /.col-lg-4 -->
 
                   <div class="col-lg-4">
-                    <div class="d-flex flex-column mt-3 mt-lg-0">
+                    <div class="d-flex flex-column mt-3 mt-lg-5">
                       <span class="text-primary text-12">Período de Faturação</span>
                       <span>Normal</span>
                     </div>
@@ -327,7 +368,7 @@
                 <h2 class="text-22 text-bold mb-4">Morada de Consumo</h2>
 
                 <div class="row">
-                  <div class="col-lg-8">
+                  <div class="col-12 col-lg-8">
                     <div class="d-flex flex-column mt-3 mt-lg-0">
                       <span class="text-primary text-12">Morada</span>
                       <span>Rua Cidade de Lisboa, 17, 7º Dto</span>
@@ -337,13 +378,13 @@
 
                   <div class="col-lg-4">
                     <div class="row">
-                      <div class="col-lg-6">
+                      <div class="col-6">
                         <div class="d-flex flex-column mt-3 mt-lg-0">
                           <span class="text-primary text-12">Código Postal</span>
                           <span>2345-123</span>
                         </div>
                       </div>
-                      <div class="col-lg-6">
+                      <div class="col-6">
                         <div class="d-flex flex-column mt-3 mt-lg-0">
                           <span class="text-primary text-12">Localidade</span>
                           <span>Lisboa</span>
@@ -363,7 +404,7 @@
                 <h2 class="text-22 text-bold mb-4">Dados do Titular</h2>
 
                 <div class="row">
-                  <div class="col-lg-4">
+                  <div class="col-6 col-lg-4">
                     <div class="d-flex flex-column mt-3 mt-lg-0">
                       <span class="text-primary text-12">Nome</span>
                       <span>João</span>
@@ -371,7 +412,7 @@
                   </div>
                   <!-- /.col-lg-4 -->
 
-                  <div class="col-lg-4">
+                  <div class="col-6 col-lg-4">
                     <div class="d-flex flex-column mt-3 mt-lg-0">
                       <span class="text-primary text-12">Apelido</span>
                       <span>Silva</span>
@@ -379,7 +420,7 @@
                   </div>
                   <!-- /.col-lg-4 -->
 
-                  <div class="col-lg-4">
+                  <div class="col-6 col-lg-4">
                     <div class="d-flex flex-column mt-3 mt-lg-0">
                       <span class="text-primary text-12">N.º de Identificação Fiscal</span>
                       <span>123456789</span>
@@ -387,20 +428,16 @@
                   </div>
                   <!-- /.col-lg-4 -->
 
-                </div>
-                <!-- /.row -->
-
-                <div class="row mt-lg-5">
-                  <div class="col-lg-4">
-                    <div class="d-flex flex-column mt-3 mt-lg-0">
+                  <div class="col-6 col-lg-4">
+                    <div class="d-flex flex-column mt-3 mt-lg-5">
                       <span class="text-primary text-12">Cartão Cidadão</span>
                       <span>123456789</span>
                     </div>
                   </div>
                   <!-- /.col-lg-4 -->
 
-                  <div class="col-lg-4">
-                    <div class="d-flex flex-column mt-3 mt-lg-0">
+                  <div class="col-6 col-lg-4">
+                    <div class="d-flex flex-column mt-3 mt-lg-5">
                       <span class="text-primary text-12">E-mail</span>
                       <span>joaosilva@gmail.com</span>
                     </div>
@@ -408,7 +445,7 @@
                   <!-- /.col-lg-4 -->
 
                   <div class="col-lg-4">
-                    <div class="d-flex flex-column mt-3 mt-lg-0">
+                    <div class="d-flex flex-column mt-3 mt-lg-5">
                       <span class="text-primary text-12">Contacto Telefónico</span>
                       <span>912 345 678</span>
                     </div>
@@ -440,7 +477,7 @@
                   </div>
 
                   <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-6 col-lg-4">
                       <div class="d-flex flex-column mt-3 mt-lg-0 read-mode">
                         <span class="text-dark-50 text-12">Nome</span>
                         <span>João</span>
@@ -455,7 +492,7 @@
                     </div>
                     <!-- /.col-lg-4 -->
 
-                    <div class="col-lg-4">
+                    <div class="col-6 col-lg-4">
                       <div class="d-flex flex-column mt-3 mt-lg-0 read-mode">
                         <span class="text-dark-50 text-12">Apelido</span>
                         <span>Silva</span>
@@ -468,10 +505,6 @@
                     </div>
                     <!-- /.col-lg-4 -->
 
-                  </div>
-                  <!-- /.row -->
-
-                  <div class="row mt-lg-5">
                     <div class="col-lg-4">
                       <div class="d-flex flex-column mt-3 mt-lg-0 read-mode">
                         <span class="text-dark-50 text-12">E-mail</span>
@@ -487,14 +520,14 @@
                     </div>
                     <!-- /.col-lg-4 -->
 
-                    <div class="col-lg-4">
-                      <div class="d-flex flex-column mt-3 mt-lg-0 read-mode">
+                    <div class="col-6 col-lg-4">
+                      <div class="d-flex flex-column mt-3 mt-lg-5 read-mode">
                         <span class="text-dark-50 text-12">Contacto Telefónico</span>
                         <span>912 345 678</span>
                       </div>
                       <!-- /.read-mode -->
 
-                      <div class="form-group mb-4 mb-lg-0 write-mode">
+                      <div class="form-group mb-4 mb-lg-0 mt-lg-5 write-mode">
                         <label for="frmContactoContacto">Contacto Telefónico</label>
                         <input type="text" class="form-control" id="frmContactoContacto" value="912 345 678">
                       </div>
@@ -502,15 +535,15 @@
                     </div>
                     <!-- /.col-lg-4 -->
 
-                    <div class="col-lg-4">
-                      <div class="d-flex flex-column mt-3 mt-lg-0 read-mode">
+                    <div class="col-6 col-lg-4">
+                      <div class="d-flex flex-column mt-3 mt-lg-5 read-mode">
                         <span class="text-dark-50 text-12">Password</span>
                         <button class="btn btn-sm btn-outline-primary disabled" disabled style="width: 140px;">Alterar
                           Password</button>
                       </div>
                       <!-- /.read-mode -->
 
-                      <div class="d-flex flex-column mt-3 mt-lg-0 write-mode">
+                      <div class="d-flex flex-column mt-3 mt-lg-5 write-mode">
                         <span class="text-primary text-12">Password</span>
                         <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal"
                           data-target="#changeMyPasswordModal" style="width: 140px;">Alterar Password</button>
@@ -557,7 +590,7 @@
 
                     <div class="col-lg-4">
                       <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-6">
                           <div class="d-flex flex-column mt-3 mt-lg-0 read-mode">
                             <span class="text-dark-50 text-12">Código Postal</span>
                             <span>2345-123</span>
@@ -570,7 +603,7 @@
                           </div>
                           <!-- /.write-mode -->
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-6">
                           <div class="d-flex flex-column mt-3 mt-lg-0 read-mode">
                             <span class="text-dark-50 text-12">Localidade</span>
                             <span>Lisboa</span>
@@ -593,15 +626,15 @@
                 <!-- /.paper -->
               </form>
 
-              <div class="d-flex flex-column align-items-start mb-3">
-                <span class="text-primary text-bold pl-4 my-3">Associar conta Facebook</span>
+              <div class="d-flex flex-column align-items-center align-items-lg-start mb-3">
+                <span class="text-primary text-bold pl-lg-4 my-3">Associar conta Facebook</span>
                 <a href="#facebook" class="btn btn-primary btn-facebook">
                   <img src="assets/img/icon_facebook.svg" alt="">
                   <span>Ligue-se com o Facebook</span>
                 </a>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 block-desktop">
               <div class="paper bg-primary text-white">
                 <h2 class="text-34 text-bold">Mantenha a sua inspeção em dia</h2>
 
