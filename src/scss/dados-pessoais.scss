@@ -37,4 +37,15 @@
       display: flex !important;
     }
   }
+
+  @include media-breakpoint-down(md) {
+    .write-mode-actions {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    div.form-edit-morada:not(.is-edit) .max-width-200 {
+      max-width: 200px;
+    }
+  }
 }
