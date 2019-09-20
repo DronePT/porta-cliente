@@ -25,6 +25,11 @@ body,
 .login-box-container {
   padding-bottom: $footer-height;
 
+  /* Mobile responsiveness */
+  @include media-breakpoint-down(md) {
+    padding-top: 100px;
+  }
+
   .login-box {
     display: flex;
     justify-content: center;
@@ -74,12 +79,21 @@ body,
       align-items: center;
       margin-bottom: 1.3rem;
       color: inherit;
+
+      height: 50px;
+      margin-top: 2px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 0.75rem;
+        margin-left: 2.5rem;
+
+        height: auto;
+        margin-top: 0;
+      }
     }
 
     /* Mobile responsiveness */
     @include media-breakpoint-down(md) {
-      padding-top: 120px;
-
       .row {
         width: 100%;
         min-width: auto;
