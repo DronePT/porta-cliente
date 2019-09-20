@@ -173,8 +173,8 @@ gulp.task("minifyjs", function() {
 // Run:  gulp copy-assets.
 // Copy all needed dependency assets files from node_modules folder to src/js, src/scss folders
 gulp.task("copy-assets", ["copy-images"], function() {
-  // Copy Slim Minified version of Jquery 3.*.* from node_modules
-  var stream = gulp.src(paths.node + "jquery/dist/jquery.slim.min.js").pipe(gulp.dest(paths.js));
+  // Copy Minified version of Jquery 3.*.* from node_modules
+  var stream = gulp.src(paths.node + "jquery/dist/jquery.min.js").pipe(gulp.dest(paths.js));
 
   // Copy BS4 JS files
   gulp.src(paths.node + "bootstrap/dist/js/**/*.js").pipe(gulp.dest(paths.dev + "/js/bootstrap4"));

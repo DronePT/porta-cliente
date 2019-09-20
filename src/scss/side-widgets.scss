@@ -1,0 +1,306 @@
+@import "./scss_vars/template_variables";
+
+ul.side-widgets {
+  position: fixed;
+  z-index: 1001;
+  right: 0;
+  top: 25%;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    &:hover {
+      > div.sw-widget {
+        right: 0px;
+        transform: translateX(0%);
+      }
+    }
+
+    > div.sw-widget {
+      position: absolute;
+      right: 50px;
+
+      display: flex;
+      flex-flow: column nowrap;
+
+      text-decoration: none;
+      outline: none;
+
+      transition: transform 50ms linear;
+      will-change: transform;
+
+      transform: translateX(100%);
+
+      &:hover,
+      &:active,
+      &:focus {
+        right: 0px;
+        transform: translateX(0%);
+      }
+
+      &.is-open {
+        right: 0px;
+        transform: translateX(0%);
+
+        .sw--content {
+          display: block;
+        }
+      }
+
+      &.sw-contactos div.sw--title {
+        background-color: #002855;
+        background-image: url(../img/icon_widget_phone.svg);
+        border-color: #002855;
+      }
+
+      &.sw-fatura {
+        div.sw--title {
+          background-color: #004891;
+          background-image: url(../img/icon_widget_faturas.svg);
+          background-position: 18px center;
+          border-color: #004891;
+
+          > span {
+            width: 140px;
+          }
+        }
+
+        input,
+        button[type="submit"] {
+          width: 350px;
+        }
+
+        p {
+          font-size: 1rem;
+          font-weight: 700;
+          line-height: 1.555555556rem;
+        }
+      }
+
+      &.sw-piquete div.sw--title {
+        background-color: #0075c9;
+        background-image: url(../img/icon_widget_wrench.svg);
+        background-position: 16px center;
+        border-color: #0075c9;
+      }
+
+      &.sw-leituras {
+        div.sw--title {
+          background-color: #1595e9;
+          background-image: url(../img/icon_widget_chart.svg);
+          background-position: 16px center;
+          border-color: #1595e9;
+        }
+
+        input,
+        button[type="submit"] {
+          width: 350px;
+        }
+      }
+
+      div.sw--title {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+
+        color: $white;
+
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.555555556rem;
+
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+
+        padding: 0 16px 0 50px;
+
+        background-repeat: no-repeat;
+        background-position: 10px center;
+
+        border: solid 2px #002855;
+      }
+
+      .sw--content {
+        position: absolute;
+        display: none;
+        user-select: none;
+
+        box-shadow: 0px 0px 16px -8px rgba(black, 0.72), 0px 4px 16px -8px rgba(black, 0.32);
+
+        top: 0;
+        right: 0;
+        background-color: $white;
+
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        .sw--title {
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 0px;
+        }
+
+        .sw-close {
+          width: 32px;
+          height: 32px;
+          display: inline-block;
+          background-image: url(../img/icon_widget_close.svg);
+          background-position: center;
+          border: solid 2px $white;
+          border-radius: 50%;
+        }
+
+        .sw-piquete-body,
+        .sw-contactos-body {
+          width: 400px;
+          padding: 1.875rem;
+
+          .piquete-header,
+          .contactos-header {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+
+            span.icon {
+              display: inline-block;
+
+              width: 50px;
+              height: 50px;
+              min-width: 50px;
+              min-height: 50px;
+              max-width: 50px;
+              max-height: 50px;
+
+              margin-right: 1rem;
+
+              background-image: url(../img/icon_wrench.svg);
+              background-size: contain;
+            }
+
+            span.text {
+              font-size: 1rem;
+              font-weight: 700;
+            }
+          }
+
+          .contactos-header > span.icon {
+            background-image: url(../img/icon_phone.svg);
+          }
+
+          .piquete-text,
+          .contactos-text {
+            font-size: 1rem;
+            font-weight: 700;
+
+            text-align: center;
+          }
+        }
+
+        .sw-leituras-body,
+        .sw-fatura-body {
+          padding: 1.875rem;
+        }
+      }
+    }
+  }
+}
+
+/* Tablet & Mobile rules */
+@media (max-width: 425px) {
+  ul.side-widgets > li div.sw-widget > div.sw--content .sw--content-body {
+    height: calc(100% - #{$header-nav-height-mobile});
+  }
+}
+
+@media (max-width: 768px) and (min-width: 426px) {
+  ul.side-widgets > li div.sw-widget > div.sw--content .sw--content-body {
+    height: calc(100% - #{$header-nav-height-tablet});
+  }
+}
+
+@media (max-width: 768px) {
+  ul.side-widgets {
+    display: flex;
+    justify-content: space-evenly;
+
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    z-index: 1031;
+
+    height: 84px;
+
+    background-color: $orange;
+
+    > li {
+      margin-top: 1rem;
+      width: 2.2rem;
+      height: 2.2rem;
+      overflow: hidden;
+
+      div.sw-widget {
+        position: inherit;
+        transform: none !important;
+        will-change: unset;
+
+        right: 0px;
+
+        > div.sw--title {
+          border: none;
+          width: 2.2rem;
+          height: 2.2rem;
+          border-radius: 0;
+          padding: 0;
+
+          background-color: transparent !important;
+          background-position: center !important;
+          background-size: initial !important;
+
+          > span {
+            display: none;
+          }
+        }
+
+        > div.sw--content {
+          position: fixed;
+          top: 0;
+          left: 0;
+          bottom: 84px;
+
+          z-index: 1031;
+          width: 100%;
+          border-radius: 0;
+          box-shadow: none;
+
+          > div.sw--title {
+            border-radius: 0;
+            background: $orange;
+            color: $primary-color;
+            border: none;
+            padding-left: 1rem;
+          }
+
+          .sw--content-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .sw-contactos-body,
+            .sw-piquete-body,
+            .sw-leituras-body {
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
