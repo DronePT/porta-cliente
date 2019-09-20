@@ -394,7 +394,7 @@
         aria-labelledby="changeContratoModalTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-contratos" role="document">
           <div class="modal-content">
-            <div class="modal-body p-6">
+            <div class="modal-body p-lg-6">
               <button type="button" class="modal-dismiss" data-dismiss="modal" aria-label="Fechar">
                 <img src="assets/img/icon_modal_dismiss.svg" alt="">
               </button>
@@ -466,10 +466,10 @@
         aria-labelledby="changeMyPasswordModalTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
           <div class="modal-content">
-            <div class="modal-body p-6">
-              <form action="" class="gascan-forms" style="max-width: 360px; margin: auto;">
-                <h1 class="text-primary text-34 text-bold text-center m-0 mb-5">Alterar Password</h1>
+            <div class="modal-body p-lg-6">
+              <h1 class="text-primary text-34 text-bold text-center m-0 mb-5">Alterar Password</h1>
 
+              <form action="" class="gascan-forms" style="max-width: 360px; margin: auto;">
                 <div class="form-group">
                   <label for="changePassword">Nova password</label>
                   <input type="password" autocomplete="new-password" class="form-control" id="changePassword">
@@ -658,16 +658,17 @@
 
               <form class="gascan-forms">
                 <div class="paper p-4 mb-4 form-edit-contacto">
-                  <div class="d-flex justify-content-between mb-4">
+                  <div class="d-flex flex-wrap justify-content-between mb-4">
                     <h2 class="text-22 text-bold">Dados de Contacto</h2>
                     <div class="read-mode">
                       <button class="btn btn-sm btn-primary toggle-edit"
                         data-target=".form-edit-contacto">Editar</button>
                     </div>
-                    <div class="write-mode">
-                      <button class="btn btn-sm btn-outline-primary mr-2 toggle-edit"
+                    <div
+                      class="write-mode write-mode-actions d-flex justify-content-between justify-content-lg-end flex-grow-1">
+                      <button class="btn btn-sm btn-outline-primary mr-2 toggle-edit flex-grow-1 flex-lg-grow-0"
                         data-target=".form-edit-contacto">Cancelar</button>
-                      <button class="btn btn-sm btn-primary">Alterar</button>
+                      <button class="btn btn-sm btn-primary flex-grow-1 flex-lg-grow-0">Alterar</button>
                     </div>
                   </div>
 
@@ -754,15 +755,16 @@
 
               <form class="gascan-forms">
                 <div class="paper p-4 mb-4 form-edit-morada">
-                  <div class="d-flex justify-content-between mb-4">
-                    <h2 class="text-22 text-bold">Morada de Correspondência</h2>
+                  <div class="d-flex flex-wrap justify-content-between mb-4">
+                    <h2 class="text-22 text-bold max-width-200">Morada de Correspondência</h2>
                     <div class="read-mode">
                       <button class="btn btn-sm btn-primary toggle-edit" data-target=".form-edit-morada">Editar</button>
                     </div>
-                    <div class="write-mode">
-                      <button class="btn btn-sm btn-outline-primary mr-2 toggle-edit"
+                    <div
+                      class="write-mode write-mode-actions d-flex justify-content-between justify-content-lg-end flex-grow-1">
+                      <button class="btn btn-sm btn-outline-primary mr-2 toggle-edit flex-grow-1 flex-lg-grow-0"
                         data-target=".form-edit-morada">Cancelar</button>
-                      <button class="btn btn-sm btn-primary">Alterar</button>
+                      <button class="btn btn-sm btn-primary flex-grow-1 flex-lg-grow-0">Alterar</button>
                     </div>
                   </div>
 
@@ -883,7 +885,7 @@
   <!-- /.container -->
 
   <!-- Scripts to be loaded  -->
-<script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/theme.min.js"></script>
   <script src="assets/js/gascan-forms.min.js"></script>
