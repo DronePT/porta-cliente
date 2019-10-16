@@ -8,3 +8,4 @@ src/scss/fontawesome
 /dist/.vs/dist/v15/.suo
 /dist/.vs/slnx.sqlite
 .vscode
+/.vs
