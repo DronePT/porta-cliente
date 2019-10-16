@@ -106,6 +106,23 @@
     display: flex;
     flex-flow: row nowrap;
 
+    position: relative;
+
+    > span.text-danger,
+    > span.form-error-message,
+    > span.ajax-result-container {
+      position: absolute;
+      top: -30px;
+      left: 0;
+
+      @include media-breakpoint-down(md) {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 1rem;
+      }
+    }
+
     .form-group {
       flex: 1;
       margin-right: 1rem;
