@@ -3,18 +3,18 @@
           box-sizing: content-box; }
   .notificacoes .gc-table table thead th.col-icon {
     min-width: 50px; }
-    @media (max-width: 1023.98px) {
+    @media (max-width: 1024.98px) {
       .notificacoes .gc-table table thead th.col-icon {
         min-width: 20px; } }
   .notificacoes .gc-table table thead th.col-subject {
     min-width: 250px; }
-    @media (max-width: 1023.98px) {
+    @media (max-width: 1024.98px) {
       .notificacoes .gc-table table thead th.col-subject {
         min-width: auto;
         width: 100%; } }
   .notificacoes .gc-table table thead th.col-actions {
     min-width: 130px; }
-    @media (max-width: 1023.98px) {
+    @media (max-width: 1024.98px) {
       .notificacoes .gc-table table thead th.col-actions {
         min-width: 30px; } }
 

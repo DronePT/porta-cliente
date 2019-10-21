@@ -1,5 +1,13 @@
 "use strict";
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 (function ($) {
   var debounce = function debounce(func, delay) {
     var inDebounce;
@@ -11,6 +19,19 @@
         return func.apply(context, args);
       }, delay);
     };
+  };
+
+  var rangeScale = function rangeScale(value, _ref, _ref2) {
+    var _ref3 = _slicedToArray(_ref, 2),
+        inputStart = _ref3[0],
+        inputEnd = _ref3[1];
+
+    var _ref4 = _slicedToArray(_ref2, 2),
+        outputStart = _ref4[0],
+        outputEnd = _ref4[1];
+
+    var factor = (outputEnd - outputStart) / (inputEnd - inputStart);
+    return outputStart + factor * (value - inputStart);
   };
 
   $(window).ready(function () {
@@ -97,7 +118,7 @@
         radialBar: {
           hollow: {
             margin: 0,
-            size: "68%"
+            size: "58%"
           },
           dataLabels: {
             show: false,
@@ -121,6 +142,13 @@
       series: leituraSeriesData
     };
     var chartLeitura = new ApexCharts($chartLeitura[0], optionsLeitura);
-    chartLeitura.render();
+    chartLeitura.render(); // map 0-100 percentage to -86 to 260 degrees
+    // and rotate the circle
+
+    var $circle = $(".cl-circle");
+    var circleDegree = rangeScale($circle.data("value"), [0, 100], [-86, 270]);
+    var circleColor = $circle.data("color") || "white";
+    $circle.css("transform", "rotateZ(" + circleDegree + "deg) translateX(50%)");
+    $circle.find(".cl-circle-dot").css("background-color", circleColor);
   });
 })($);
