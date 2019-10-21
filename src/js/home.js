@@ -9,6 +9,11 @@
     };
   };
 
+  const rangeScale = (value, [inputStart, inputEnd], [outputStart, outputEnd]) => {
+    const factor = (outputEnd - outputStart) / (inputEnd - inputStart);
+    return outputStart + factor * (value - inputStart);
+  };
+
   $(window).ready(() => {
     $(".widget-news").each(function() {
       const $el = $(this);
@@ -106,7 +111,7 @@
         radialBar: {
           hollow: {
             margin: 0,
-            size: "68%"
+            size: "58%"
           },
           dataLabels: {
             show: false,
@@ -133,5 +138,14 @@
     var chartLeitura = new ApexCharts($chartLeitura[0], optionsLeitura);
 
     chartLeitura.render();
+
+    // map 0-100 percentage to -86 to 260 degrees
+    // and rotate the circle
+    const $circle = $(".cl-circle");
+    const circleDegree = rangeScale($circle.data("value"), [0, 100], [-86, 270]);
+    const circleColor = $circle.data("color") || "white";
+
+    $circle.css("transform", "rotateZ(" + circleDegree + "deg) translateX(50%)");
+    $circle.find(".cl-circle-dot").css("background-color", circleColor);
   });
 })($);
