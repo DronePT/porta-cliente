@@ -25,6 +25,10 @@
     padding: 1rem;
     margin-bottom: 1rem;
 
+    @include media-breakpoint-up(lg) {
+      height: 100%;
+    }
+
     .w-title {
       font-weight: bold;
       font-size: 1.222222222rem;
@@ -33,6 +37,17 @@
 
       display: flex;
       justify-content: space-between;
+
+
+      @include media-breakpoint-up(lg) {
+        > a {
+          pointer-events: none;
+
+          img.caret {
+            display: none;
+          }
+        }
+      }
     }
 
     .w-subtitle {
@@ -44,7 +59,9 @@
     }
 
     .widget-footer {
-      // position: absolute;
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+      }
 
       display: flex;
       justify-content: center;
