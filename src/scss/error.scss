@@ -1,0 +1,39 @@
+@import "./scss_vars/template_variables";
+@import "./bootstrap4/mixins/breakpoints";
+
+main.backoffice div.backoffice-container div.backoffice-content.error-page {
+  height: calc(100% - #{$header-height});
+  padding-bottom: 0;
+
+  &> .container-fluid, &> .container-fluid > .error-message {
+    height: 100%;
+  }
+
+  .error-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-flow: column;
+
+    color: $primary-color;
+
+    background-image: url("../img/bg_error.png");
+    background-position: 50% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    img {
+      margin-top: -$header-height;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      margin-top: 2rem;
+    }
+  }
+}
