@@ -9,3 +9,5 @@ src/scss/fontawesome
 /dist/.vs/slnx.sqlite
 .vscode
 /.vs
+portal.zip
+dist/portal.zip
