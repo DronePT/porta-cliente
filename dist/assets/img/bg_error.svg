@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1658" height="674.858" viewBox="0 0 1658 674.858">
+    <defs>
+        <linearGradient id="a" x2="1" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#0075c9"/>
+            <stop offset="0.507" stop-color="#0075c9"/>
+            <stop offset="1" stop-color="#004891"/>
+        </linearGradient>
+        <linearGradient id="e" y1="0.409" x2="1" y2="0.417" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fff" stop-opacity="0.502"/>
+            <stop offset="1" stop-color="#0075c9" stop-opacity="0.302"/>
+        </linearGradient>
+        <linearGradient id="f" y1="0.133" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+            <stop offset="0.441" stop-color="#0075c9" stop-opacity="0.302"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0.502"/>
+        </linearGradient>
+        <clipPath id="d">
+            <g transform="matrix(1, 0, 0, 1, 0, 0)" style="filter:url(#b)">
+                <rect width="1658" height="674.858" transform="translate(0 0)" style="fill:url(#a)"/>
+            </g>
+        </clipPath>
+        <filter id="b" x="-15" y="-10" width="1688" height="704.858" filterUnits="userSpaceOnUse">
+            <feOffset dy="5" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="5" result="c"/>
+            <feFlood flood-opacity="0.149"/>
+            <feComposite operator="in" in2="c"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g transform="translate(0 -2447)">
+        <path d="M0,1129Z" transform="translate(0 1991.563)" style="fill:#002855;opacity:.85"/>
+        <g transform="translate(0 2447)" style="clip-path:url(#d)">
+            <g transform="translate(-6.064 198.038)">
+                <path d="M0,0V169.292H1.068V622.319S339,812.426,820.794,569.494c461.126-254.762,677.909-295.641,1238.63-299.5-.508-1.649-.409-56.652-.248-100.7h.248V0Z" transform="translate(2059.424 693.093) rotate(180)" style="fill:url(#e);opacity:.3"/>
+                <path d="M990.77,381.556C611.838,282.117,460.782,244.987,0,243.479c.395-.611.342-26.455.223-48.759H0V0H1692.365V194.72h-.881V463.555s-13.816.581-39.368.581C1557.61,464.136,1302.43,456.2,990.77,381.556Z" transform="translate(1692.439 478.616) rotate(180)" style="fill:url(#f);opacity:.3"/>
+            </g>
+        </g>
+    </g>
+</svg>

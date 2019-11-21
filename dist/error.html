@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/theme.min.css">
   <link rel="stylesheet" href="assets/css/side-widgets.css">
-  <link rel="stylesheet" href="assets/css/home.min.css">
+  <link rel="stylesheet" href="assets/css/error.css">
 </head>
 
 <body>
@@ -296,7 +296,7 @@
                   </div>
                 </a>
 
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                   <li class="dropdown-item">
                     <a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
                       data-target="#changeMyPasswordModal">Alterar Password</a>
@@ -491,369 +491,18 @@
       </div>
       <!-- End: Change logged user password modal -->
 
-      <div class="backoffice-content">
-        <div class="container home">
-          <div class="row">
-            <div class="col">
-              <div class="page-header">
-                <h1 class="text-primary text-34 text-bold my-5">
-                  Home
-                </h1>
-              </div>
-              <!-- /.page-header -->
+      <div class="backoffice-content error-page">
+        <div class="container-fluid no-gutters px-0">
+          <div class="error-message">
+            <img src="assets/img/icon_error.svg" alt="">
+            <h1 class="text-avenir-heavy text-48">
+              Algo correu mal
+            </h1>
+            <h2>
+              404 - Page not Found
+            </h2>
 
-              <div class="row widgets-h-340">
-                <div class="col-lg-6">
-                  <div class="widget">
-                    <div class="w-title">
-                      <a href="#collapseHistorico" data-toggle="collapse" role="button" aria-expanded="true"
-                        aria-controls="collapseHistorico">
-                        <span>Histórico de Consumos</span>
-                        <img src="assets/img/icon_caret_down.svg" alt="" class="caret">
-                      </a>
-                    </div>
-                    <div id="collapseHistorico" class="collapse show">
-                      <div id="chart-consumos" class="chart" data-values="50,25,53,40,36,40"
-                        data-labels="Ago,Set,Out,Nov,Dez,Jan">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- / Chart Historico de Consumos -->
-
-                <div class="col-lg-3">
-                  <div class="widget">
-                    <div class="w-title">
-                      <a href="#collapseUltima" data-toggle="collapse" role="button" aria-expanded="true"
-                        aria-controls="collapseUltima">
-                        <span>Última Leitura</span>
-                        <img src="assets/img/icon_caret_down.svg" alt="" class="caret">
-                      </a>
-                    </div>
-                    <!-- /.w-title -->
-
-                    <div class="w-subtitle pr-4 pr-lg-0">
-                      <span>12/01/2019</span>
-                      <span class="d-lg-none">
-                        <div>
-                          3200,56 m<sup>3</sup>
-                        </div>
-                      </span>
-                    </div>
-
-                    <div id="collapseUltima" class="collapse show">
-                      <div class="chart-leitura-container">
-                        <div class="cl-circle-container">
-                          <div class="cl-circle" data-value="50" data-color="#ffffff">
-                            <span class="cl-circle-dot"></span>
-                          </div>
-                        </div>
-                        <div class="cl-hollow">
-                          <div>
-                            3200<span>,56</span>
-                          </div>
-                          <span>m<sup>3</sup></span>
-                        </div>
-                        <div class="cl-bottom">
-                          <span class="label">Média de Consumos</span>
-                          <span class="value">47,49 m<sup>3</sup></span>
-                        </div>
-                        <div id="chart-leitura" class="chart" data-values="60"></div>
-                      </div>
-
-                      <div class="widget-footer">
-                        <a href="leituras.html" class="text-12">Ver leituras</a>
-                      </div>
-                      <!-- /.widget-footer -->
-                    </div>
-                  </div>
-                  <!-- /.widget -->
-
-                </div>
-                <!-- / Chart Ultima Leitura -->
-
-                <div class="col-lg-3">
-                  <div class="widget widget-primary">
-                    <div class="w-title">
-                      <a href="#collapseUltimaFatura" data-toggle="collapse" role="button" aria-expanded="true"
-                        aria-controls="collapseUltimaFatura">
-                        <span>Última Fatura</span>
-                        <img src="assets/img/icon_caret_down_white.svg" alt="" class="caret">
-                      </a>
-                    </div>
-                    <div class="w-subtitle">12/01/2019</div>
-
-                    <div id="collapseUltimaFatura" class="collapse show">
-                      <div class="widget-fatura">
-                        <span class="alert-badge text-12 text-bold mr-4 mr-lg-0">Por Pagar</span>
-                        <div class="fatura-reference">
-                          <img src="assets/img/icon_mb.svg" alt="">
-                          <div class="ref">
-                            <div>Fatura 9087654321</div>
-
-                            <span class="wf-label">Referência</span>
-                            <span class="wf-value">345 543 376</span>
-                          </div>
-                        </div>
-                        <!-- /.fatura-reference -->
-
-                        <div class="fatura-payment">
-                          <div>
-                            <span class="wf-label">Pagar até</span>
-                            <span class="wf-value">12/01/2019</span>
-                          </div>
-                          <div>
-                            <span class="wf-label">Entidade</span>
-                            <span class="wf-value">10928</span>
-                          </div>
-                          <div>
-                            <span class="wf-label">Montante</span>
-                            <span class="wf-value">0000,00 &euro;</span>
-                          </div>
-                        </div>
-                        <!-- /.fatura-payment -->
-
-                      </div>
-                      <!-- /.widget-fatura -->
-
-                      <div class="widget-footer">
-                        <a href="faturas.html" class="text-12">Ver faturas</a>
-                      </div>
-                      <!-- /.widget-footer -->
-                    </div>
-                    <!-- /#collapseUltimaFatura -->
-
-                  </div>
-                </div>
-              </div>
-              <!-- /.row.widgets-h-340 -->
-
-              <div class="widgets-spacer d-none d-lg-block"></div>
-
-              <div class="row widgets-h-500">
-                <div class="col-lg-6">
-                  <div class="widget with-footer">
-                    <div class="w-title">Histórico de Faturas</div>
-
-                    <div class="gc-table mt-3 columns-dark columns-bold hover-2">
-                      <table border="0">
-                        <thead>
-                          <tr>
-                            <th style="min-width: 17px;"></th>
-                            <th width="100%" style="min-width: 90px;">Fatura Nº</th>
-                            <th style="min-width: 120px">Data da Fatura</th>
-                            <th style="min-width: 85px;">Estado</th>
-                            <th style="min-width: 70px;">Montante</th>
-                            <th style="min-width: 30px;"></th>
-                          </tr>
-                        </thead>
-                        <!-- /thead -->
-
-                        <tbody>
-                          <tr>
-                            <td>
-                              <i class="icon-fatura"></i>
-                            </td>
-                            <td>9087654321</td>
-                            <td>09/02/2019</td>
-                            <td>
-                              <span class="badge badge-pill w-100 badge-warning">Por pagar</span>
-                            </td>
-                            <td>22,85 &euro;</td>
-                            <td style="width: 50px;">
-                              <div>
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td>
-                              <i class="icon-fatura"></i>
-                            </td>
-                            <td>9087654321</td>
-                            <td>09/02/2019</td>
-                            <td>
-                              <span class="badge badge-pill w-100 badge-success">Pago</span>
-                            </td>
-                            <td>22,85 &euro;</td>
-                            <td style="width: 50px;">
-                              <div>
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td>
-                              <i class="icon-fatura"></i>
-                            </td>
-                            <td>9087654321</td>
-                            <td>09/02/2019</td>
-                            <td>
-                              <span class="badge badge-pill w-100 badge-danger">Não pago</span>
-                            </td>
-                            <td>22,85 &euro;</td>
-                            <td style="width: 50px;">
-                              <div>
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td>
-                              <i class="icon-fatura"></i>
-                            </td>
-                            <td>9087654321</td>
-                            <td>09/02/2019</td>
-                            <td>
-                              <span class="badge badge-pill w-100 badge-success">Pago</span>
-                            </td>
-                            <td>22,85 &euro;</td>
-                            <td style="width: 50px;">
-                              <div>
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <!-- /.gc-table -->
-
-                    <div class="widget-footer">
-                      <a href="faturas.html" class="text-12">Ver todas</a>
-                    </div>
-                    <!-- /.widget-footer -->
-                  </div>
-                  <!-- /.widget -->
-                </div>
-                <div class="col-lg-6">
-                  <div class="widget with-footer">
-                    <div class="w-title">Notificações</div>
-
-                    <div class="gc-table mt-3 columns-dark columns-bold hover-2">
-                      <table border="0">
-                        <thead>
-                          <tr>
-                            <th style="min-width: 20px;"></th>
-                            <th width="100%" style="min-width: 90px;">Assunto</th>
-                            <th style="min-width: 150px">Recebido</th>
-                            <th style="min-width: 30px;"></th>
-                          </tr>
-                        </thead>
-                        <!-- /thead -->
-
-                        <tbody>
-                          <tr>
-                            <td>
-                              <i class="icon-mail"></i>
-                            </td>
-                            <td>Fatura em atraso</td>
-                            <td>09/02/2019</td>
-                            <td style="width: 50px;">
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <i class="icon-mail"></i>
-                            </td>
-                            <td>Aviso de corte</td>
-                            <td>09/02/2019</td>
-                            <td style="width: 50px;">
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <i class="icon-mail"></i>
-                            </td>
-                            <td>Inspeção periódica</td>
-                            <td>09/02/2019</td>
-                            <td style="width: 50px;">
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </td>
-                          </tr>
-                          <!-- <tr>
-                            <td>
-                              <i class="icon-mail"></i>
-                            </td>
-                            <td>Comunique a sua leitura</td>
-                            <td>09/02/2019</td>
-                            <td style="width: 50px;">
-                              <a href="#">
-                                <img src="assets/img/icon_circle_right.svg" alt="Ver">
-                              </a>
-                            </td>
-                          </tr> -->
-
-                        </tbody>
-                      </table>
-                    </div>
-                    <!-- /.gc-table -->
-
-                    <div class="widget-footer">
-                      <a href="faturas.html" class="text-12">Ver todas</a>
-                    </div>
-                    <!-- /.widget-footer -->
-                  </div>
-                  <!-- /.widget -->
-                </div>
-              </div>
-              <!-- /.row.widgets-h-500 -->
-
-              <div class="widgets-spacer d-none d-lg-block"></div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="widget widget-news">
-                    <div class="widget-news-footer">
-                      <div class="details">
-                        <span class="text-orange">12/01/2019</span>
-                        <span class="text-34 text-bold text-white">Título da Campanha <br>de Destaque Maior</span>
-                      </div>
-                      <a href="#ver-mais" class="btn btn-sm btn-outline-light view-more">Ver mais</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.row -->
-
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="widget widget-news" data-bg="assets/img/PC_002.jpg">
-                    <div class="widget-news-footer">
-                      <div class="details">
-                        <span class="text-orange">12/01/2019</span>
-                        <span class="text-22 text-bold text-white">Título da Campanha <br>de Destaque Menor</span>
-                      </div>
-                      <a href="#ver-mais" class="btn btn-sm btn-outline-light view-more">Ver mais</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="widget widget-news" data-bg="assets/img/PC_003.png">
-                    <div class="widget-news-footer">
-                      <div class="details">
-                        <span class="text-orange">12/01/2019</span>
-                        <span class="text-22 text-bold text-white">Título da Campanha <br>de Destaque Menor</span>
-                      </div>
-                      <a href="#ver-mais" class="btn btn-sm btn-outline-light view-more">Ver mais</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.row -->
-
-            </div>
+            <a href="#back" class="btn btn-large btn-primary">Voltar</a>
           </div>
         </div>
       </div>
@@ -871,8 +520,7 @@
   <script src="assets/js/theme.min.js"></script>
   <script src="assets/js/gascan-forms.min.js"></script>
   <script src="assets/js/side-widgets.js"></script>
-  <script src="assets/js/apexcharts.min.js"></script>
-  <script src="assets/js/home.js"></script>
+  <script src="assets/js/error-page.js"></script>
 </body>
 
 </html>
